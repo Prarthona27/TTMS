@@ -1,5 +1,8 @@
 <?php
 
+use App\Http\Controllers\DashboardController;
+use App\Http\Controllers\EventsController;
+Use Illuminate\Routing\Route as RoutingRoute; 
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -14,5 +17,9 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('admin.A_dashboard');
 });
+
+Route::get('/events',[EventsController::class,'widgets'])->name('admin.events');
+Route::get('/events/Eventlist',[EventsController::class,'Eventlist'])->name('admin.events.eventlist');
+Route::post('/events/EventStore',[EventsController::class,'EventStore']);
