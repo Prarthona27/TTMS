@@ -33,7 +33,7 @@
                   <ul>
                      <li class="active"><a href="index.html">Home</a></li>
                      <li><a href="about.html">Agencies</a></li>
-                     <li><a href="services.html">Packages</a></li>
+                     <li><a href="services.html">Services</a></li>
                     
                     
                   </ul>
@@ -55,16 +55,11 @@
                      <div class="container">
                         <h1 class="banner_taital">Adventure</h1>
                         <p class="banner_text">There are many variations of passages of Lorem Ipsum available, but the majority have sufferedThere are ma available, but the majority have suffered</p>
-                        <div class="read_bt"><a href="#">Get A Quote</a></div>
+                        <div class="read_bt"><a href="#">Search Destination</a></div>
                      </div>
                   </div>
-                  <div class="carousel-item">
-                     <div class="container">
-                        <h1 class="banner_taital">Adventure</h1>
-                        <p class="banner_text">There are many variations of passages of Lorem Ipsum available, but the majority have sufferedThere are ma available, but the majority have suffered</p>
-                        <div class="read_bt"><a href="#">Get A Quote</a></div>
-                     </div>
-                  </div>
+                 
+                  
                </div>
             </div>
          </div>

@@ -18,13 +18,22 @@ class EventsController extends Controller
     }
     public function EventStore(Request $request)
     {
+        // dd(date('Ymdhms'));
+        // dd($request->all());
+        if ($request->hasfile('image')) {
+            $file = $request->file('image');
+            $filename = date('Ymdhms').'.'.$file->getClientOriginalExtension();
+            // dd($filename);
+            $file->storeAs('/uploads',$filename);
+        }
+
         Eventlist::create([
             //dd($request->all());
             //database name:: form name
            'Event_name'=>$request->Event_name,
             'Event_time'=>$request->Event_time,
             'Event_Description'=>$request->Event_Description,
-            'image'=>$request->image
+            'image'=>$filename
         ]);
         return redirect()->back();
 }

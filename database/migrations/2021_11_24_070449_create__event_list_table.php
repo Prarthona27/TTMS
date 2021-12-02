@@ -16,7 +16,7 @@ class CreateEventListTable extends Migration
         Schema::create('_event_list', function (Blueprint $table) {
             $table->id();
             $table->String('Event_name');
-            $table->double('Event_time');
+            $table->dateTime('Event_time');
             $table->String('Event_Description');
             $table->string('image');
             $table->timestamps();

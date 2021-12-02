@@ -43,27 +43,94 @@
       <!-- services section start -->
       <div class="services_section layout_padding">
          <div class="container">
-            <h1 class="services_taital">Services </h1>
+            <h1 class="services_taital">Packages </h1>
             <p class="services_text">There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration</p>
             <div class="services_section_2">
                <div class="row">
                   <div class="col-md-4">
-                     <div><img src="{{url('userp/images/img-1.png')}}" class="services_img"></div>
-                     <div class="btn_main"><a href="#">Rafting</a></div>
+                     <div><img src="{{url('userp/images/mamun-srizon-qay3lNDSHzc-unsplash.jpg')}}" class="services_img"></div>
+                     <div class="btn_main"><a href="#">Details</a></div>
                   </div>
                   <div class="col-md-4">
-                     <div><img src="{{url('userp/images/img-2.png')}}" class="services_img"></div>
-                     <div class="btn_main active"><a href="#">Hiking</a></div>
+                     <div><img src="{{url('userp/images/emosieaoa1671.jpg')}}" class="services_img"></div>
+                     <div class="btn_main active"><a href="#">Details</a></div>
                   </div>
                   <div class="col-md-4">
-                     <div><img src="{{url('userp/images/img-3.png')}}" class="services_img"></div>
-                     <div class="btn_main"><a href="#">Camping</a></div>
+                     <div><img src="{{url('userp/images/istockphoto-470928468-612x612.jpg')}}" class="services_img"></div>
+                     <div class="btn_main"><a href="#">Details</a></div>
                   </div>
+                  
                </div>
             </div>
          </div>
       </div>
       <!-- services section end -->
+      
+<!-- destination section start -->
+<div class="client_section layout_padding">
+         <div class="container">
+            <h1 class="client_taital">Destinations</h1>
+            <div class="client_section_2">
+               <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+                  <ol class="carousel-indicators">
+                     <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+                     <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+                     <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+                   </ol>
+                  <div class="carousel-inner">
+                     <div class="carousel-item active">
+                        <div class="client_main">
+                           <div class="box_left">
+                              <p class="lorem_text">The perfect combination- lone travelling , excellent organisation and the best of experiences , thank you .</p>
+                           </div>
+                           <div class="box_right">
+                              <div class="client_taital_left">
+                                 <div class="client_img"><img src="{{url('userp/images/istockphoto-470928468-612x612.jpg')}}"></div>
+                                 
+                              </div>
+                              
+                           </div>
+                        </div>
+                     </div>
+                     <div class="carousel-item">
+                        <div class="client_main">
+                           <div class="box_left">
+                              <p class="lorem_text">A well planned , varied experience with excellent prior planning and local knowledge. Very interesting, different hotels. The local drivers and guides made us feel welcome and at home in their communities.</p>
+                           </div>
+                           <div class="box_right">
+                              <div class="client_taital_left">
+                                 <div class="client_img"><img src="{{url('userp/images/mamun-srizon-qay3lNDSHzc-unsplash.jpg')}}"></div>
+                                 
+                              </div>
+                              
+                           </div>
+                        </div>
+                     </div>
+                     <div class="carousel-item">
+                        <div class="client_main">
+                           <div class="box_left">
+                              <p class="lorem_text">A compelling mix of city , hills , safari and beach interwoven with local cultural , scenic and culinary experience .</p>
+                           </div>
+                           <div class="box_right">
+                              <div class="client_taital_left">
+                                 <div class="client_img"><img src="{{url('userp/images/emosieaoa1671.jpg')}}"></div>
+                                 
+                              </div>
+                              <div class="carousel-item">
+                        <div class="client_main">
+                           <div class="box_left">
+                              <p class="lorem_text">A compelling mix of city , hills , safari and beach interwoven with local cultural , scenic and culinary experience .</p>
+                          
+         
+                          </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+      <!-- destination section start -->
       
       
 
@@ -82,7 +149,7 @@
                      <div class="carousel-item active">
                         <div class="client_main">
                            <div class="box_left">
-                              <p class="lorem_text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugia</p>
+                              <p class="lorem_text">The perfect combination- lone travelling , excellent organisation and the best of experiences , thank you .</p>
                            </div>
                            <div class="box_right">
                               <div class="client_taital_left">
@@ -99,15 +166,15 @@
                      <div class="carousel-item">
                         <div class="client_main">
                            <div class="box_left">
-                              <p class="lorem_text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugia</p>
+                              <p class="lorem_text">A well planned , varied experience with excellent prior planning and local knowledge. Very interesting, different hotels. The local drivers and guides made us feel welcome and at home in their communities.</p>
                            </div>
                            <div class="box_right">
                               <div class="client_taital_left">
-                                 <div class="client_img"><img src="{{url('userp/images/client-img.png')}}"></div>
+                                 <div class="client_img"><img src="{{url('userp/images/client-img1.png')}}"></div>
                                  <div class="quick_icon"><img src="{{url('userp/images/quick-icon.png')}}"></div>
                               </div>
                               <div class="client_taital_right">
-                                 <h4 class="client_name">Dame</h4>
+                                 <h4 class="client_name">Rose</h4>
                                  <p class="customer_text">Customer</p>
                               </div>
                            </div>
@@ -116,15 +183,15 @@
                      <div class="carousel-item">
                         <div class="client_main">
                            <div class="box_left">
-                              <p class="lorem_text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugia</p>
+                              <p class="lorem_text">A compelling mix of city , hills , safari and beach interwoven with local cultural , scenic and culinary experience .</p>
                            </div>
                            <div class="box_right">
                               <div class="client_taital_left">
-                                 <div class="client_img"><img src="{{url('userp/images/client-img.png')}}"></div>
+                                 <div class="client_img"><img src="{{url('userp/images/client-image.jpg')}}"></div>
                                  <div class="quick_icon"><img src="{{url('userp/images/quick-icon.png')}}"></div>
                               </div>
                               <div class="client_taital_right">
-                                 <h4 class="client_name">Dame</h4>
+                                 <h4 class="client_name">Elsa</h4>
                                  <p class="customer_text">Customer</p>
                               </div>
                            </div>
@@ -140,7 +207,7 @@
       <div class="choose_section layout_padding">
          <div class="container">
             <h1 class="choose_taital">Why Choose Us</h1>
-            <p class="choose_text">There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text. All </p>
+            <p class="choose_text">We are especially proud of our selection of tours around Bangladesh because it has no analogues in the market.We are glad to offer our clients the best rates on our tours, transfers and other services. Due to direct contracts with all our suppliers, our prices are always relevant and affordable.</p>
             <div class="read_bt_1"><a href="#">Read More</a></div>
             <div class="newsletter_box">
                <h1 class="let_text">Let Start Talk with Us</h1>
