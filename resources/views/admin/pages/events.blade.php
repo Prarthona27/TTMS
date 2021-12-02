@@ -21,15 +21,17 @@
     <input name="Event_Description" class="form-control" id="inputAddress" placeholder="1234 Main St">
   </div>
   
+  <div class="form-group">
+    <label for="inputAddress">Place Image</label>
+    <input name="Event_Description" class="form-control" id="inputAddress" placeholder="1234 Main St">
+  </div>
 
   <div class="form-group">
     <div class="form-check">
-      <input class="form-check-input" type="checkbox" id="gridCheck">
-      <label class="form-check-label" for="gridCheck">
-        Check me out
-      </label>
+      
+      
     </div>
   </div>
-  <button type="submit" class="btn btn-primary">Sign in</button>
+  <button type="submit" class="btn btn-primary">Save</button>
 </form>
 @endsection

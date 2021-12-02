@@ -23,7 +23,8 @@ class EventsController extends Controller
             //database name:: form name
            'Event_name'=>$request->Event_name,
             'Event_time'=>$request->Event_time,
-            'Event_Description'=>$request->Event_Description
+            'Event_Description'=>$request->Event_Description,
+            'image'=>$request->image
         ]);
         return redirect()->back();
 }
