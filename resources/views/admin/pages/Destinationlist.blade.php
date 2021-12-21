@@ -22,6 +22,9 @@
                     <td>{{$destination->season}}</td>
                     <td>{{$destination->budget}}</td>
                     <td>{{$destination->transport}}</td>
+                    <td>
+                      <img width="100px" src="{{url('/uploads/'.$destination->image)}}" alt="">
+                    </td>
                 </tr>
             @endforeach      
   </tbody>

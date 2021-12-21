@@ -8,7 +8,14 @@ class AgenciesController extends Controller
 {
     //to view agency form
     public function widgets(){
+        
         return view('admin.pages.agencies');
+    }
+     //to view agency form website
+     public function WagencyList(){
+        $agencies=Agencylist::all();
+        return view('admin.pages.Agency.Wagencylist',compact('agencies'));
+       
     }
     //to view agencylist
     public function Agencylist(){

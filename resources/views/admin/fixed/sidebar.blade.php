@@ -1,3 +1,10 @@
+@if(session()->has('message'))
+        <p class="alert alert-success">
+            {{session()->get('message')}}
+        </p>
+    @endif
+
+
 <div id="sidebar-collapse" class="col-sm-3 col-lg-2 sidebar">
 		<div class="profile-sidebar">
 			<div class="profile-userpic">
@@ -18,7 +25,7 @@
 		<ul class="nav menu">
 			<li class="active"><a href="{{route('admin.events')}}"><em class="fa fa-calendar-check-o">&nbsp;</em> Events</a></li>
 			<li><a href="{{route('admin.agencies')}}"><em class="fa fa-users">&nbsp;</em> Agency</a></li>
-			<li><a href="{{route('admin.travellers')}}"><em class="fa fa-street-view">&nbsp;</em> Traveller</a></li>
+			
 			<li><a href="{{route('admin.destinations')}}"><em class="glyphicon glyphicon-tent">&nbsp;</em> Destination</a></li>
 			<li><a href="panels.html"><em class="fa fa-question">&nbsp;</em> Questionnaire  </a></li>
 			<li class="parent "><a data-toggle="collapse" href="#sub-item-1">
@@ -66,7 +73,8 @@
 
 
 			</li>
-			<li><a href="login.html"><em class="fa fa-power-off">&nbsp;</em> Logout</a></li>
+			
+			<li><a href="{{route('admin.logout')}}"><em class="fa fa-power-off">&nbsp;</em> Logout</a></li>
 
 			
 		</ul>

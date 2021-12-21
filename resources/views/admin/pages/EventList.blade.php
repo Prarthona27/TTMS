@@ -17,6 +17,7 @@
                     <td>{{$event->Event_name}}</td>
                     <td>{{$event->Event_time}}</td>
                     <td>{{$event->Event_Description}}</td>
+                    <td>{{$event->Place_Image}}</td>
                     <td>
                       <img width="100px" src="{{url('/uploads/'.$event->image)}}" alt="">
                     </td>

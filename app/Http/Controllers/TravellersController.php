@@ -9,7 +9,7 @@ class TravellersController extends Controller
 {
    //to view traveller form
    public function widgets(){
-    return view('admin.pages.travellers');
+    return view('website.accounts');
 }
 //to view travellerlist
 public function Travellerlist(){

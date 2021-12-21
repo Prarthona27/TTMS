@@ -5,6 +5,8 @@ use App\Http\Controllers\EventsController;
 use App\Http\Controllers\AgenciesController;
 use App\Http\Controllers\TravellersController;
 use App\Http\Controllers\DestinationsController;
+use App\Http\Controllers\HomeController;
+use App\Http\Controllers\Website\UserController;
 Use Illuminate\Routing\Route as RoutingRoute; 
 use Illuminate\Support\Facades\Route;
 
@@ -48,11 +50,22 @@ Route::get('/destinations/Destinationlist',[DestinationsController::class,'Desti
 Route::post('/destinations/DestinationStore',[DestinationsController::class,'DestinationStore']);
 
 
+//create account
+Route::get('/accounts/Travellerlist',[TravellersController::class,'Travellerlist'])->name('admin.accounts.travellerlist');
 
+//view agencies
+
+Route::get('/agencies/WagencyList',[AgenciesController::class,'WagencyList'])->name('admin.agencies.WagencyList');
+
+//user login
+Route::get('/',[HomeController::class,'home'])->name('website');
+Route::post('/registration',[UserController::class,'registration'])->name('user.registration');
+Route::post('/login',[UserController::class,'login'])->name('user.login');
+Route::get('/logout',[UserController::class,'logout'])->name('user.logout');
 
 //website index
 
 
 Route::get('/', function () {
-  return view(view: 'website.master');
+  return view(view: 'website.home');
 });

@@ -17,11 +17,22 @@ public function Destinationlist(){
 }
 public function DestinationStore(Request $request)
 {
+
+        // dd($request->all());
+        if ($request->hasfile('image')) {
+            $file = $request->file('image');
+            $filename = date('Ymdhms').'.'.$file->getClientOriginalExtension();
+            // dd($filename);
+            $file->storeAs('/uploads',$filename);
+        }
+
+
+
     Destinationlist::create([
         //dd($request->all());
         //database name:: form name
         'name'=>$request->name,
-        'name'=>$request->image,
+        'image'=>$filename,
         'description'=>$request->description,
         'season'=>$request->season,
         'budget'=>$request->budget,

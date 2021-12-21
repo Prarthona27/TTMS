@@ -9,21 +9,21 @@
     </div> -->
     <div class="form-group ">
       <label for="inputPassword4">Event Name</label>
-      <input type="text"  name="Event_name" class="form-control" id="inputPassword4" placeholder="Password">
+      <input type="text"  name="Event_name" class="form-control" id="inputPassword4" placeholder="">
     </div>
   </div>
   <div class="form-group">
     <label for="inputAddress">Event Time</label>
-    <input type="datetime-local" name="Event_time" class="form-control" id="inputAddress" placeholder="1234 Main St">
+    <input type="datetime-local" name="Event_time" class="form-control" id="inputAddress" placeholder="">
   </div>
   <div class="form-group">
     <label for="inputAddress">Event Description</label>
-    <input type="text" name="Event_Description" class="form-control" id="inputAddress" placeholder="1234 Main St">
+    <textarea type="text" name="Event_Description" class="form-control" id="inputAddress" placeholder=""></textarea>
   </div>
   
   <div class="form-group">
     <label for="inputAddress">Place Image</label>
-    <input type="file" name="image" class="form-control" id="inputAddress" placeholder="1234 Main St">
+    <input type="file" name="image" class="form-control" id="inputAddress" placeholder="">
   </div>
 
   <div class="form-group">
