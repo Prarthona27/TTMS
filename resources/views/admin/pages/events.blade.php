@@ -1,6 +1,6 @@
 @extends('welcome')
 @section('content')
-<form action="{{url('/events/EventStore')}}" method="POST" enctype="multipart/form-data">
+<form action="{{route('event.store')}}" method="POST" enctype="multipart/form-data">
     @csrf
   <div class="form-row">
     <!-- <div class="form-group col-md-6">

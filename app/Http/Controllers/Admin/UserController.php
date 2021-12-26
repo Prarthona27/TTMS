@@ -29,13 +29,14 @@ class UserController extends Controller
         if(Auth::attempt($userInfo)){
             return redirect()->route('home')->with('message','Login successful.');
         }
-        return redirect()->back()->withErrors('Invalid user credentials');
+        return redirect()->back()->with('error','Invalid user credentials');
 
     }
 
 
-    public function logout()
+    public function Adminlogout()
     {
+        // dd("ok");
         Auth::logout();
         return redirect()->route('admin.login')->with('message','Logging out.');
     }

@@ -1,6 +1,6 @@
 @extends('website.master')
 @section('content')
-<form action="{{url('/travellers/TravellerStore')}}" method="POST">
+<form action="{{route('traveller.store')}}" method="POST">
     @csrf
   <div class="form-row">
     <div class="form-group col-md-6">
