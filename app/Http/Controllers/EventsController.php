@@ -19,11 +19,11 @@ class EventsController extends Controller
     public function EventStore(Request $request)
     {
         // dd(date('Ymdhms'));
-        // dd($request->all());
+       // dd($request->all());
         if ($request->hasfile('image')) {
             $file = $request->file('image');
             $filename = date('Ymdhms').'.'.$file->getClientOriginalExtension();
-            // dd($filename);
+           //dd($filename);
             $file->storeAs('/uploads',$filename);
         }
 
@@ -90,7 +90,7 @@ class EventsController extends Controller
             // 'image'=>$filename,
 
         ]);
-        return redirect()->route('admin.event.list')->with('success','Event Updated Successfully.');
+        return redirect()->route('admin.events.eventlist')->with('success','Event Updated Successfully.');
 
     }
     public function eventView($event_id)
