@@ -1,5 +1,6 @@
 @extends('welcome')
 @section('content')
+
 <table class="table">
   <thead>
     <tr>
@@ -8,6 +9,7 @@
       <th scope="col">Event Time</th>
       <th scope="col">Event Description</th>
       <th scope="col">Place Image</th>
+      <th scope="col">Action</th>
     </tr>
   </thead>
   <tbody>
@@ -26,7 +28,7 @@
                       <img width="100px" src="{{url('/uploads/'.$event->image)}}" alt="">
                     </td>
                     <td>
-                        <a class="btn btn-primary" href="{{route('admin.events.eventlist',$event->id)}}">View</a>
+                        <a class="btn btn-primary" href="{{route('admin.event.view',$event->id)}}">View</a>
                         <a class="btn btn-info" href="{{route('admin.event.edit',$event->id)}}">Edit</a>
                         <a class="btn btn-danger" href="{{route('admin.event.delete',$event->id)}}">Delete</a>
                     </td>
@@ -34,4 +36,5 @@
             @endforeach      
   </tbody>
 </table>
+
 @endsection

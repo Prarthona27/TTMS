@@ -43,53 +43,63 @@ class EventsController extends Controller
        return redirect()->back()->with('success','Event Deleted.');
     }
 
-    public function eventEdit($id)
+    public function eventEdit($event_id)
     {
 
-        $event=Event::find($id);
+        $event=EventList::find($event_id);
 //        $event=Event::where('user_id',$id)->first();
 
 //        dd($event);
-        $all_categories=Category::all();
+    
 //        dd($all_categories);
-        return view('admin.pages.edit-event',compact('all_categories','event'));
+        return view('admin.pages.edit-event',compact('event'));
 
     }
 
-    public function eventUpdate(Request $request,$id)
+    public function eventUpdate(Request $request,$event_id)
     {
+// dd($request->all());
 
-
-        $event=Event::find($id);
+        $event=EventList::find($event_id);
 
 //        Event::where('column','value')->udpate([
 //            'column'=>'request form field name'
 //        ]);
 
-        $image_name=$event->image;
-//              step 1: check image exist in this request.
-        if($request->hasFile('event_image'))
-        {
-            // step 2: generate file name
-            $image_name=date('Ymdhis') .'.'. $request->file('event_image')->getClientOriginalExtension();
+//         $filename=$event->image;
+// //              step 1: check image exist in this request.
+//         if($request->hasFile('event_image'))
+//         {
+//             // step 2: generate file name
+//             $filename=date('Ymdhis') .'.'. $request->file('event_image')->getClientOriginalExtension();
 
-            //step 3 : store into project directory
+//             //step 3 : store into project directory
 
-            $request->file('event_image')->storeAs('/events',$image_name);
+//             $request->file('event_image')->storeAs('/uploads',$filename);
 
-        }
+//         }
+   
 
 
         $event->update([
+            
             // field name from db || field name from form
-            'name'=>$request->name,
-            'price'=>$request->price,
-            'category_id'=>$request->category,
-            'details'=>$request->details,
-            'image'=>$image_name,
+            'Event_name'=>$request->Event_name,
+            'Event_time'=>$request->Event_time,
+            'Event_Description'=>$request->Event_Description,
+            // 'image'=>$filename,
 
         ]);
         return redirect()->route('admin.event.list')->with('success','Event Updated Successfully.');
 
+    }
+    public function eventView($event_id)
+    {
+
+//        collection= get(), all()====== read with loop (foreach)
+//       object= first(), find(), findOrFail(),======direct
+      $event=Eventlist::find($event_id);
+//      $product=Product::where('id',$product_id)->first();
+        return view('admin.pages.WEvent.event_view',compact('event'));
     }
 }

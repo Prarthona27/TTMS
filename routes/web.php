@@ -44,6 +44,7 @@ Route::group(['prefix'=>'admin'],function (){
   Route::get('/events',[EventsController::class,'widgets'])->name('admin.events');
   Route::get('/events/Eventlist',[EventsController::class,'Eventlist'])->name('admin.events.eventlist');
   Route::post('/events/EventStore',[EventsController::class,'EventStore'])->name('event.store');
+  Route::get('event/view/{event_id}',[EventsController::class,'eventView'])->name('admin.event.view');
   Route::get('event/edit/{event_id}',[EventsController::class,'eventEdit'])->name('admin.event.edit');
   Route::put('event/update/{event_id}',[EventsController::class,'eventUpdate'])->name('admin.event.update');
   Route::get('event/delete/{event_id}',[EventsController::class,'eventDelete'])->name('admin.event.delete');
