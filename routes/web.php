@@ -65,6 +65,10 @@ Route::group(['prefix'=>'admin'],function (){
   Route::get('/destinations',[DestinationsController::class,'widgets'])->name('admin.destinations');
   Route::get('/destinations/Destinationlist',[DestinationsController::class,'Destinationlist'])->name('admin.destinations.destinationlist');
   Route::post('/destinations/DestinationStore',[DestinationsController::class,'DestinationStore'])->name('destination.store');
+  Route::get('destination/view/{destination_id}',[DestinationsController::class,'destinationView'])->name('admin.destination.view');
+  Route::get('destination/edit/{destination_id}',[DestinationsController::class,'destinationEdit'])->name('admin.destination.edit');
+  Route::put('destination/update/{destination_id}',[DestinationsController::class,'destinationUpdate'])->name('admin.destination.update');
+  Route::get('destination/delete/{destination_id}',[DestinationsController::class,'destinationDelete'])->name('admin.destination.delete');
 
 
   //create account

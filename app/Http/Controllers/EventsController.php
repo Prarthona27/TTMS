@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 use App\Models\Eventlist;
-
+// use App\Models\Event;
 use Illuminate\Http\Request;
 
 class EventsController extends Controller
@@ -62,22 +62,22 @@ class EventsController extends Controller
 
         $event=EventList::find($event_id);
 
-//        Event::where('column','value')->udpate([
-//            'column'=>'request form field name'
-//        ]);
+    //    Event::where('column','value')->udpate([
+    //        'column'=>'request form field name'
+    //    ]);
 
-//         $filename=$event->image;
-// //              step 1: check image exist in this request.
-//         if($request->hasFile('event_image'))
-//         {
-//             // step 2: generate file name
-//             $filename=date('Ymdhis') .'.'. $request->file('event_image')->getClientOriginalExtension();
+        $filename=$event->image;
+//              step 1: check image exist in this request.
+        if($request->hasFile('event_image'))
+        {
+            // step 2: generate file name
+            $filename=date('Ymdhis') .'.'. $request->file('event_image')->getClientOriginalExtension();
 
-//             //step 3 : store into project directory
+            //step 3 : store into project directory
 
-//             $request->file('event_image')->storeAs('/uploads',$filename);
+            $request->file('event_image')->storeAs('/uploads',$filename);
 
-//         }
+        }
    
 
 
@@ -87,7 +87,7 @@ class EventsController extends Controller
             'Event_name'=>$request->Event_name,
             'Event_time'=>$request->Event_time,
             'Event_Description'=>$request->Event_Description,
-            // 'image'=>$filename,
+            'image'=>$filename,
 
         ]);
         return redirect()->route('admin.events.eventlist')->with('success','Event Updated Successfully.');

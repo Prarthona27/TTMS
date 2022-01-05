@@ -3,7 +3,7 @@
 
 @section('content')
 
-<h1>Edit event</h1>
+<h2>Edit event</h2>
 
 @if(session()->has('success'))
     <p class="alert alert-success">
@@ -30,10 +30,10 @@
         <input name="Event_Description" value="{{$event->Event_Description}}" placeholder="Enter Event details"  type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
     </div>
 
-    <!-- <div class="mb-3">
+     <div class="mb-3">
         <label for="exampleInputEmail1" class="form-label">Event Image</label>
         <input name="event_image" type="file" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
-    </div> -->
+    </div> 
 
     <button type="submit" class="btn btn-success">Edit</button>
 </form>
