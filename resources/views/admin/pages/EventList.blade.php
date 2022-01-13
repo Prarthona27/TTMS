@@ -8,6 +8,10 @@
       <th scope="col">Event Name</th>
       <th scope="col">Event Time</th>
       <th scope="col">Event Description</th>
+      <th scope="col">Event Description1</th>
+      <th scope="col">Event Description2</th>
+      <th scope="col">Event Description3</th>
+      <th scope="col">Event Description4</th>
       <th scope="col">Place Image</th>
       <th scope="col">Action</th>
     </tr>
@@ -23,6 +27,10 @@
                     <td>{{$event->Event_name}}</td>
                     <td>{{$event->Event_time}}</td>
                     <td>{{$event->Event_Description}}</td>
+                    <td>{{$event->Event_Description1}}</td>
+                    <td>{{$event->Event_Description2}}</td>
+                    <td>{{$event->Event_Description3}}</td>
+                    <td>{{$event->Event_Description4}}</td>
                     <td>{{$event->Place_Image}}</td>
                     <td>
                       <img width="100px" src="{{url('/uploads/'.$event->image)}}" alt="">

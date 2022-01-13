@@ -17,7 +17,11 @@ class CreateEventListTable extends Migration
             $table->id();
             $table->String('Event_name');
             $table->dateTime('Event_time');
-            $table->String('Event_Description');
+            $table->longText('Event_Description');
+            $table->string('Event_Description1');
+            $table->string('Event_Description2');
+            $table->string('Event_Description3');
+            $table->string('Event_Description4');
             $table->string('image');
             $table->timestamps();
         });

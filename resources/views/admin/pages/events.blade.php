@@ -20,7 +20,22 @@
     <label for="inputAddress">Event Description</label>
     <textarea type="text" name="Event_Description" class="form-control" id="inputAddress" placeholder=""></textarea>
   </div>
-  
+  <div class="form-group">
+    <label for="inputAddress">Event Description1</label>
+    <textarea type="text" name="Event_Description1" class="form-control" id="inputAddress" placeholder=""></textarea>
+  </div>
+  <div class="form-group">
+    <label for="inputAddress">Event Description2</label>
+    <textarea type="text" name="Event_Description2" class="form-control" id="inputAddress" placeholder=""></textarea>
+  </div>
+  <div class="form-group">
+    <label for="inputAddress">Event Description3</label>
+    <textarea type="text" name="Event_Description3" class="form-control" id="inputAddress" placeholder=""></textarea>
+  </div>
+  <div class="form-group">
+    <label for="inputAddress">Event Description4</label>
+    <textarea type="text" name="Event_Description4" class="form-control" id="inputAddress" placeholder=""></textarea>
+  </div>
   <div class="form-group">
     <label for="inputAddress">Place Image</label>
     <input type="file" name="image" class="form-control" id="inputAddress" placeholder="">

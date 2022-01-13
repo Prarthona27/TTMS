@@ -17,7 +17,7 @@ class CreateDestinatonsTable extends Migration
             $table->id();
             $table->string('name');
             $table->string('image');
-            $table->string('description');
+            $table->longText('description');
             $table->string('season');
             $table->string('budget');
             $table->string('transport');

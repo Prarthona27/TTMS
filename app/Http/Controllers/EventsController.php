@@ -33,6 +33,10 @@ class EventsController extends Controller
            'Event_name'=>$request->Event_name,
             'Event_time'=>$request->Event_time,
             'Event_Description'=>$request->Event_Description,
+            'Event_Description1'=>$request->Event_Description1,
+            'Event_Description2'=>$request->Event_Description2,
+            'Event_Description3'=>$request->Event_Description3,
+            'Event_Description4'=>$request->Event_Description4,
             'image'=>$filename
         ]);
         return redirect()->back();
@@ -87,6 +91,10 @@ class EventsController extends Controller
             'Event_name'=>$request->Event_name,
             'Event_time'=>$request->Event_time,
             'Event_Description'=>$request->Event_Description,
+            'Event_Description1'=>$request->Event_Description1,
+            'Event_Description2'=>$request->Event_Description2,
+            'Event_Description3'=>$request->Event_Description3,
+            'Event_Description4'=>$request->Event_Description4,
             'image'=>$filename,
 
         ]);
