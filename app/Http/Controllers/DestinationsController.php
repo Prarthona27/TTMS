@@ -42,7 +42,7 @@ public function DestinationStore(Request $request)
 }
 public function destinationDelete($destination_id)
     {
-       Destination::find($destination_id)->delete();
+       DestinationList::find($destination_id)->delete();
        return redirect()->back()->with('success','Destination Deleted.');
     }
 
@@ -106,5 +106,14 @@ public function destinationDelete($destination_id)
       $destination=Destinationlist::find($destination_id);
 //      $product=Product::where('id',$product_id)->first();
         return view('admin.pages.WEvent.destination_view',compact('destination'));
+    }
+    public function W_destinationView($destination_id)
+    {
+
+//        collection= get(), all()====== read with loop (foreach)
+//       object= first(), find(), findOrFail(),======direct
+      $destination=Destinationlist::find($destination_id);
+//      $product=Product::where('id',$product_id)->first();
+        return view('website.wdestinationview',compact('destination'));
     }
 }

@@ -39,7 +39,7 @@ class EventsController extends Controller
     }
         public function eventDelete($event_id)
     {
-       Event::find($product_id)->delete();
+       EventList::find($event_id)->delete();
        return redirect()->back()->with('success','Event Deleted.');
     }
 
@@ -102,4 +102,16 @@ class EventsController extends Controller
 //      $product=Product::where('id',$product_id)->first();
         return view('admin.pages.WEvent.event_view',compact('event'));
     }
+
+    
+    public function W_eventView($event_id)
+    {
+
+//        collection= get(), all()====== read with loop (foreach)
+//       object= first(), find(), findOrFail(),======direct
+      $event=Eventlist::find($event_id);
+//      $product=Product::where('id',$product_id)->first();
+        return view('website.weventview',compact('event'));
+    }
+
 }

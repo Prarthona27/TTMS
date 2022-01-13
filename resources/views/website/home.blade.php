@@ -7,22 +7,16 @@
           
             <div class="services_section_1">
                <div class="row">
+               @foreach ($package as $package)
                   <div class="col-md-4">
-                     <div><img style="height: 250px;"src="{{url('userp/images/mamun-srizon-qay3lNDSHzc-unsplash.jpg')}}" class="services_img"></div>
-                     <div class="btn_main"><a href="#">Details</a></div>
+                     <div><img style="height: 250px;"src="{{url('/uploads/'.$package->image)}}" class="services_img"></div>
+                     <div class="btn_main"><a href="{{route('website.event.view',$package->id)}}">Details</a></div>
                   </div>
-                  <div class="col-md-4">
-                     <div><img style="height: 250px;"src="{{url('userp/images/emosieaoa1671.jpg')}}" class="services_img"></div>
-                     <div class="btn_main active"><a href="#">Details</a></div>
-                  </div>
-                  <div class="col-md-4">
-                     <div><img style="height: 250px;"src="{{url('userp/images/istockphoto-470928468-612x612.jpg')}}" class="services_img"></div>
-                     <div class="btn_main"><a href="#">Details</a></div>
-                  </div>
-
+                  @endforeach 
                   
                   
                </div>
+              
             </div>
          </div>
       </div>
@@ -35,18 +29,13 @@
           
             <div class="services_section_1">
                <div class="row">
+               @foreach ($destination as $destination)
                   <div class="col-md-4">
-                     <div><img style="height: 250px;"src="{{url('userp/images/tahsin-islam-gc8IPK97-hE-unsplash.jpg')}}" class="services_img"></div>
-                     <div class="btn_main"><a href="#">Details</a></div>
+                     <div><img style="height: 250px;"src="{{url('/uploads/'.$destination->image)}}" class="services_img"></div>
+                     <div class="btn_main"><a href="{{route('website.destination.view',$destination->id)}}">Details</a></div>
                   </div>
-                  <div class="col-md-4">
-                     <div><img style="height: 250px;"src="{{url('userp/images/Hanging Bridge.jpg')}}" class="services_img"></div>
-                     <div class="btn_main active"><a href="#">Details</a></div>
-                  </div>
-                  <div class="col-md-4">
-                     <div><img style="height: 250px;"src="{{url('userp/images/sylhet-tea-garden-bangladesh.jpg')}}" class="services_img"></div>
-                     <div class="btn_main"><a href="#">Details</a></div>
-                  </div>
+                  @endforeach 
+                  
                   
                </div>
             </div>

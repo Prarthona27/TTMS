@@ -29,7 +29,7 @@ Route::group(['prefix'=>'admin'],function (){
     Route::post('/login',[AdminUserController::class,'doLogin'])->name('admin.doLogin');
     
 
-    Route::group(['middleware'=>'auth'],function (){
+    Route::group(['middleware'=>['auth','admin']],function (){
       Route::get('/', function () {
         return view('admin.A_dashboard');
     })->name('home');
@@ -88,6 +88,8 @@ Route::get('/',[HomeController::class,'home'])->name('website');
 Route::post('/registration',[UserController::class,'registration'])->name('user.registration');
 Route::post('/login',[UserController::class,'login'])->name('user.login');
 Route::get('/logout',[UserController::class,'logout'])->name('user.logout');
+Route::get('event/details/{event_id}',[EventsController::class,'W_eventView'])->name('website.event.view');
+Route::get('destination/details/{destination_id}',[DestinationsController::class,'W_destinationView'])->name('website.destination.view');
 
 //website index
 
