@@ -17,13 +17,13 @@
     </tr>
   </thead>
   <tbody>
-  @foreach ($events as $event)
+  @foreach ($events as $key=>$event)
 
   <td>
                         <a class="" href="{{route('admin.events.eventlist',$event->id)}}"> {{$event->name}}</a>
                     </td>
                 <tr>
-                    <th>{{$event->id}}</th>
+                    <th>{{$key+1}}</th>
                     <td>{{$event->Event_name}}</td>
                     <td>{{$event->Event_time}}</td>
                     <td>{{$event->Event_Description}}</td>
@@ -32,6 +32,7 @@
                     <td>{{$event->Event_Description3}}</td>
                     <td>{{$event->Event_Description4}}</td>
                     <td>{{$event->Place_Image}}</td>
+                    <td>{{$event->Agency_id}}</td>
                     <td>
                       <img width="100px" src="{{url('/uploads/'.$event->image)}}" alt="">
                     </td>

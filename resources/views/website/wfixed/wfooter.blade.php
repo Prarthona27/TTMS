@@ -1,10 +1,6 @@
  <!-- footer section start -->
  <div class="footer_section layout_padding">
-         <div class="container">
-            <div class="input_btn_main">
-               <input type="text" class="mail_text" placeholder="Enter your email" name="Enter your email">
-               <div class="subscribe_bt"><a href="#">Subscribe</a></div>
-            </div>
+         
             <div class="location_main">
                <div class="call_text"><img src="{{url('userp/images/call-icon.png')}}"></div>
                <div class="call_text"><a href="#">Call +01 1234567890</a></div>

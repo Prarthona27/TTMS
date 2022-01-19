@@ -12,7 +12,7 @@
                      <div><img style="height: 250px;"src="{{url('/uploads/'.$package->image)}}" class="services_img"></div>
                      <div class="btn_main"><a href="{{route('website.event.view',$package->id)}}">Details</a></div>
                   </div>
-                  @endforeach 
+               @endforeach 
                   
                   
                </div>

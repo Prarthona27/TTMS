@@ -15,25 +15,45 @@
     @method('PUT')
     @csrf
     <div class="mb-3">
-        <label for="exampleInputEmail1" class="form-label">Event Name</label>
+        <label for="exampleInputEmail1" class="form-label">Package Name</label>
         <input name="Event_name" value="{{$event->Event_name}}" placeholder="Enter Event Name" type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
 
     </div>
 
     <div class="mb-3">
-        <label for="exampleInputEmail1" class="form-label">Event Time</label>
+        <label for="exampleInputEmail1" class="form-label">Package Time</label>
         <input name="Event_time" value="{{$event->Event_time}}" placeholder="Enter Event Time"  type="dateTime-local" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
     </div>
 
     <div class="mb-3">
-        <label for="exampleInputEmail1" class="form-label">Event details</label>
+        <label for="exampleInputEmail1" class="form-label">Package details</label>
         <input name="Event_Description" value="{{$event->Event_Description}}" placeholder="Enter Event details"  type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
     </div>
-
+    <div class="mb-3">
+        <label for="exampleInputEmail1" class="form-label">Food Menu</label>
+        <input name="Event_Description1" value="{{$event->Event_Description1}}" placeholder="Enter Event details"  type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+    </div>
+    <div class="mb-3">
+        <label for="exampleInputEmail1" class="form-label">Transport</label>
+        <input name="Event_Description2" value="{{$event->Event_Description2}}" placeholder="Enter Event details"  type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+    </div>
+    <div class="mb-3">
+        <label for="exampleInputEmail1" class="form-label">Included</label>
+        <input name="Event_Description3" value="{{$event->Event_Description3}}" placeholder="Enter Event details"  type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+    </div>
+    <div class="mb-3">
+        <label for="exampleInputEmail1" class="form-label">End Date</label>
+        <input name="Event_Description4" value="{{$event->Event_Description4}}" placeholder="Enter Event details"  type="dateTime-local" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+    </div>
+    <div class="mb-3">
+        <label for="exampleInputEmail1" class="form-label">Agency Id</label>
+        <input name="Agency_id" value="{{$event->Agency_id}}" placeholder="Enter Event details"  type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+    </div>
      <div class="mb-3">
         <label for="exampleInputEmail1" class="form-label">Event Image</label>
         <input name="event_image" type="file" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
     </div> 
+   
 
     <button type="submit" class="btn btn-success">Edit</button>
 </form>

@@ -91,6 +91,8 @@ Route::get('/logout',[UserController::class,'logout'])->name('user.logout');
 Route::get('event/details/{event_id}',[EventsController::class,'W_eventView'])->name('website.event.view');
 Route::get('destination/details/{destination_id}',[DestinationsController::class,'W_destinationView'])->name('website.destination.view');
 
+Route::get('/book/tour',[EventsController::class,'bookTour'])->name('book.tour');
+
 //website index
 
 

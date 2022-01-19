@@ -75,7 +75,7 @@
                   <ul>
                      <li class="active"><a href="index.html">Home</a></li>
                      <li><a href="{{route('admin.agencies.WagencyList')}}">Agencies</a></li>
-                     <li><a href="{{route('admin.travellers')}}">My Account</a></li>
+                     <li><a href="#">My Account</a></li>
                    
                    @if(auth()->user())
                     <!-- Button trigger modal -->
@@ -115,7 +115,7 @@
                   </div>
                   <div class="carousel-item">
                      <div class="container">
-                        <h1 class="banner_taital">Adventure</h1>
+                        <h1 class="banner_taital">Travel</h1>
                         <p class="banner_text"></p>
                         <div class="read_bt"><a href="#">Search Destination</a></div>
                      </div>

@@ -37,7 +37,8 @@ class EventsController extends Controller
             'Event_Description2'=>$request->Event_Description2,
             'Event_Description3'=>$request->Event_Description3,
             'Event_Description4'=>$request->Event_Description4,
-            'image'=>$filename
+            'image'=>$filename,
+            'Agency_id'=>$request->Agency_id
         ]);
         return redirect()->back();
     }
@@ -96,6 +97,7 @@ class EventsController extends Controller
             'Event_Description3'=>$request->Event_Description3,
             'Event_Description4'=>$request->Event_Description4,
             'image'=>$filename,
+            'Agency_id'=>$request->Agency_id,
 
         ]);
         return redirect()->route('admin.events.eventlist')->with('success','Event Updated Successfully.');
@@ -120,6 +122,11 @@ class EventsController extends Controller
       $event=Eventlist::find($event_id);
 //      $product=Product::where('id',$product_id)->first();
         return view('website.weventview',compact('event'));
+    }
+
+    public function bookTour()
+    {
+        return view('website.accounts');
     }
 
 }

@@ -25,7 +25,8 @@ public function TravellerStore(Request $request)
         'phone'=>$request->phone,
         'email'=>$request->email,
         'address'=>$request->address,
-        'package_name'=>$request->package_name
+        'package_name'=>$request->package_name,
+        'Agency_id'=>$request->Agency_id
     ]);
     return redirect()->back();
 }

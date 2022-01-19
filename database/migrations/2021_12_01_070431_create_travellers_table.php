@@ -20,6 +20,7 @@ class CreateTravellersTable extends Migration
             $table->string('email');
             $table->string('address');
             $table->string('package_name');
+            $table->string('Agency_id');
             $table->timestamps();
         });
     }

@@ -2,8 +2,9 @@
 @section('content')
 <form action="{{route('traveller.store')}}" method="POST">
     @csrf
+    <ul style="margin-left:40px;">
   <div class="form-row">
-    
+  
     <div class="form-group col-md-6">
       <label for="inputPassword4">Traveller Name</label>
       <input name="name" class="form-control" id="inputPassword4" placeholder="">
@@ -28,11 +29,15 @@
     <input name="package_name" class="form-control" id="inputAddress" placeholder="">
   </div>
   <div class="form-group">
+    <label for="inputAddress">Agency_Id</label>
+    <input name="Agency_id" class="form-control" id="inputAddress" placeholder="">
+  </div>
+  <div class="form-group">
     <div class="form-check">
-      
-      
+         
     </div>
   </div>
   <button type="submit" class="btn btn-primary">Confirm</button>
+  </ul>
 </form>
 @endsection
