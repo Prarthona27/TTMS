@@ -24,6 +24,7 @@ class CreateEventListTable extends Migration
             $table->string('Event_Description4');
             $table->string('image');
             $table->string('Agency_id');
+            $table->string('status')->default('pending');
             $table->timestamps();
         });
     }

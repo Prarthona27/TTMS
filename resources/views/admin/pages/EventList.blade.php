@@ -13,15 +13,14 @@
       <th scope="col">Event Description3</th>
       <th scope="col">Event Description4</th>
       <th scope="col">Place Image</th>
+      <th scope="col">Agency name</th>
       <th scope="col">Action</th>
     </tr>
   </thead>
   <tbody>
   @foreach ($events as $key=>$event)
 
-  <td>
-                        <a class="" href="{{route('admin.events.eventlist',$event->id)}}"> {{$event->name}}</a>
-                    </td>
+  
                 <tr>
                     <th>{{$key+1}}</th>
                     <td>{{$event->Event_name}}</td>
@@ -31,15 +30,16 @@
                     <td>{{$event->Event_Description2}}</td>
                     <td>{{$event->Event_Description3}}</td>
                     <td>{{$event->Event_Description4}}</td>
-                    <td>{{$event->Place_Image}}</td>
-                    <td>{{$event->Agency_id}}</td>
                     <td>
                       <img width="100px" src="{{url('/uploads/'.$event->image)}}" alt="">
                     </td>
+                    <td>{{$event->agency->name}}</td>
+
                     <td>
                         <a class="btn btn-primary" href="{{route('admin.event.view',$event->id)}}">View</a>
                         <a class="btn btn-info" href="{{route('admin.event.edit',$event->id)}}">Edit</a>
                         <a class="btn btn-danger" href="{{route('admin.event.delete',$event->id)}}">Delete</a>
+                        <a class="btn btn-warning" href="{{route('admin.event.approve',$event->id)}}">Approve</a>
                     </td>
                 </tr>
             @endforeach      

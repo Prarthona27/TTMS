@@ -9,7 +9,7 @@ use Illuminate\Http\Request;
 class HomeController extends Controller
 {
     public function home(){
-        $package=Eventlist::all();
+        $package=Eventlist::where('status','approved')->get();
         $destination=Destinationlist::all();
         return view('website.home',compact('package','destination'));
     }

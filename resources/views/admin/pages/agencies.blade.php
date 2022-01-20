@@ -3,11 +3,8 @@
 <form action="{{route('agency.store')}}" method="POST">
     @csrf
   <div class="form-row">
-    <div class="form-group col-md-6">
-      <label for="inputEmail4">id</label>
-      <input name="id" class="form-control" id="inputEmail4" placeholder="">
-    </div>
-    <div class="form-group col-md-6">
+
+    <div class="form-group">
       <label for="inputPassword4">Agency Name</label>
       <input name="name" class="form-control" id="inputPassword4" placeholder="">
     </div>

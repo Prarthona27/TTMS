@@ -2,19 +2,22 @@
 
 namespace App\Http\Controllers;
 use App\Models\Eventlist;
-// use App\Models\Event;
+
+use App\Models\Agencylist;
 use Illuminate\Http\Request;
 
 class EventsController extends Controller
 {
     //to view event form
     public function widgets(){
-        return view('admin.pages.events');
+        $agency=Agencylist::all();
+        return view('admin.pages.events',compact('agency'));
     }
     //to view eventlist
     public function Eventlist(){
         $events=Eventlist::all();
-        return view('admin.pages.EventList',compact('events'));
+        $agency=Agencylist::all();
+        return view('admin.pages.EventList',compact('events','agency'));
     }
     public function EventStore(Request $request)
     {
@@ -38,7 +41,7 @@ class EventsController extends Controller
             'Event_Description3'=>$request->Event_Description3,
             'Event_Description4'=>$request->Event_Description4,
             'image'=>$filename,
-            'Agency_id'=>$request->Agency_id
+            'Agency_id'=>$request->Agency_name
         ]);
         return redirect()->back();
     }
@@ -50,14 +53,14 @@ class EventsController extends Controller
 
     public function eventEdit($event_id)
     {
-
+        $agency=Agencylist::all();
         $event=EventList::find($event_id);
 //        $event=Event::where('user_id',$id)->first();
 
 //        dd($event);
     
 //        dd($all_categories);
-        return view('admin.pages.edit-event',compact('event'));
+        return view('admin.pages.edit-event',compact('event','agency'));
 
     }
 
@@ -97,7 +100,7 @@ class EventsController extends Controller
             'Event_Description3'=>$request->Event_Description3,
             'Event_Description4'=>$request->Event_Description4,
             'image'=>$filename,
-            'Agency_id'=>$request->Agency_id,
+            'Agency_id'=>$request->Agency_name
 
         ]);
         return redirect()->route('admin.events.eventlist')->with('success','Event Updated Successfully.');
@@ -127,6 +130,14 @@ class EventsController extends Controller
     public function bookTour()
     {
         return view('website.accounts');
+    }
+    public function eventApprove($event_id)
+    {
+      $event=Eventlist::find($event_id);
+      $event->update([
+        'status'=>'approved'
+      ]);
+        return redirect()->back();
     }
 
 }

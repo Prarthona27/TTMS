@@ -47,7 +47,11 @@
     </div>
     <div class="mb-3">
         <label for="exampleInputEmail1" class="form-label">Agency Id</label>
-        <input name="Agency_id" value="{{$event->Agency_id}}" placeholder="Enter Event details"  type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+        <select class="form-control"name="Agency_name">
+      @foreach($agency as $agency)
+      <option value="{{$agency->id}}">{{$agency->name}}</option>
+      @endforeach
+    </select>
     </div>
      <div class="mb-3">
         <label for="exampleInputEmail1" class="form-label">Event Image</label>
@@ -56,6 +60,7 @@
    
 
     <button type="submit" class="btn btn-success">Edit</button>
+   
 </form>
 
 @endsection

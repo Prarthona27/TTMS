@@ -38,7 +38,11 @@
   </div>
   <div class="form-group">
     <label for="inputAddress">Agency Id</label>
-    <textarea type="text" name="Agency_id" class="form-control" id="inputAddress" placeholder=""></textarea>
+    <select class="form-control"name="Agency_name">
+      @foreach($agency as $agency)
+      <option value="{{$agency->id}}">{{$agency->name}}</option>
+      @endforeach
+    </select>
   </div>
   <div class="form-group">
     <label for="inputAddress">Place Image</label>

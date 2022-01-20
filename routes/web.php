@@ -48,6 +48,8 @@ Route::group(['prefix'=>'admin'],function (){
   Route::get('event/edit/{event_id}',[EventsController::class,'eventEdit'])->name('admin.event.edit');
   Route::put('event/update/{event_id}',[EventsController::class,'eventUpdate'])->name('admin.event.update');
   Route::get('event/delete/{event_id}',[EventsController::class,'eventDelete'])->name('admin.event.delete');
+  Route::get('event/approve/{event_id}',[EventsController::class,'eventApprove'])->name('admin.event.approve');
+  
   //agency add by admin
 
   Route::get('/agencies',[AgenciesController::class,'widgets'])->name('admin.agencies');
