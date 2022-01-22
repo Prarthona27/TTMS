@@ -30,4 +30,16 @@ public function TravellerStore(Request $request)
     ]);
     return redirect()->back();
 }
+
+public function travellerApprove($traveller_id){
+    {
+        // dd($traveller_id);
+        $traveller=Travellerlist::find($traveller_id);
+        $traveller->update([
+          'status'=>'approved'
+        ]);
+          return redirect()->back();
+      }
+    
+}
 }

@@ -10,4 +10,8 @@ class Travellerlist extends Model
     use HasFactory;
     protected $table='travellers';
     protected $guarded=[];
+
+    public function traveller(){
+        return $this->belongsTo(Travellerlist::class,'Agency_id','id');
+    }
 }

@@ -23,7 +23,8 @@
 			</div>
 		</form>
 		<ul class="nav menu">
-			<li class="active"><a href="{{route('admin.events')}}"><em class="fa fa-calendar-check-o">&nbsp;</em> Events</a></li>
+			<li class="active"><a href="{{route('agency.events')}}"><em class="fa fa-calendar-check-o">&nbsp;</em> Events</a></li>
+			
 			<li><a href="{{route('admin.agencies')}}"><em class="fa fa-users">&nbsp;</em> Agency</a></li>
 			
 			<li><a href="{{route('admin.destinations')}}"><em class="glyphicon glyphicon-tent">&nbsp;</em> Destination</a></li>
@@ -57,13 +58,11 @@
 				<em class="fa fa-navicon">&nbsp;</em> Multilevel <span data-toggle="collapse" href="#sub-item-2" class="icon pull-right"><em class="fa fa-plus"></em></span>
 				</a>
 				<ul class="children collapse" id="sub-item-2">
-					<li><a class="" href="{{route('admin.events.eventlist')}}">
+					<li><a class="" href="{{route('agency.events.eventlist')}}">
 						<span class="fa fa-arrow-right">&nbsp;</span> Event List
 					</a></li>
-					<li><a class="" href="{{route('admin.agencies.agencylist')}}">
-						<span class="fa fa-arrow-right">&nbsp;</span> Agencies
-					</a></li>
-					<li><a class="" href="{{route('admin.travellers.travellerlist')}}">
+					
+					<li><a class="" href="{{route('agency.travellers.travellerlist')}}">
 						<span class="fa fa-arrow-right">&nbsp;</span> Traveller
 					</a></li>
 				</ul>

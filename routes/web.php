@@ -41,13 +41,13 @@ Route::group(['prefix'=>'admin'],function (){
 
     //events create by admin
 
-  Route::get('/events',[EventsController::class,'widgets'])->name('admin.events');
-  Route::get('/events/Eventlist',[EventsController::class,'Eventlist'])->name('admin.events.eventlist');
+  Route::get('/events',[EventsController::class,'widgets'])->name('agency.events');
+  Route::get('/events/Eventlist',[EventsController::class,'Eventlist'])->name('agency.events.eventlist');
   Route::post('/events/EventStore',[EventsController::class,'EventStore'])->name('event.store');
-  Route::get('event/view/{event_id}',[EventsController::class,'eventView'])->name('admin.event.view');
-  Route::get('event/edit/{event_id}',[EventsController::class,'eventEdit'])->name('admin.event.edit');
-  Route::put('event/update/{event_id}',[EventsController::class,'eventUpdate'])->name('admin.event.update');
-  Route::get('event/delete/{event_id}',[EventsController::class,'eventDelete'])->name('admin.event.delete');
+  Route::get('event/view/{event_id}',[EventsController::class,'eventView'])->name('agency.event.view');
+  Route::get('event/edit/{event_id}',[EventsController::class,'eventEdit'])->name('agency.event.edit');
+  Route::put('event/update/{event_id}',[EventsController::class,'eventUpdate'])->name('agency.event.update');
+  Route::get('event/delete/{event_id}',[EventsController::class,'eventDelete'])->name('agency.event.delete');
   Route::get('event/approve/{event_id}',[EventsController::class,'eventApprove'])->name('admin.event.approve');
   
   //agency add by admin
@@ -56,12 +56,15 @@ Route::group(['prefix'=>'admin'],function (){
   Route::get('/agencies/Agencylist',[AgenciesController::class,'Agencylist'])->name('admin.agencies.agencylist');
   Route::post('/agencies/AgencyStore',[AgenciesController::class,'AgencyStore'])->name('agency.store');
 
+ 
+
   //traveller add by admin
 
   Route::get('/travellers',[TravellersController::class,'widgets'])->name('admin.travellers');
   Route::get('/travellers/Travellerlist',[TravellersController::class,'Travellerlist'])->name('admin.travellers.travellerlist');
   Route::post('/travellers/TravellerStore',[TravellersController::class,'TravellerStore'])->name('traveller.store');;
-
+  Route::get('traveller/approve/{traveller_id}',[TravellersController::class,'travellerApprove'])->name('admin.traveller.approve');
+ 
   //destination add by admin
 
   Route::get('/destinations',[DestinationsController::class,'widgets'])->name('admin.destinations');
