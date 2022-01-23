@@ -13,7 +13,7 @@
       <th scope="col">Event Description3</th>
       <th scope="col">Event Description4</th>
       <th scope="col">Place Image</th>
-      <th scope="col">Agency name</th>
+    
       <th scope="col">Action</th>
     </tr>
   </thead>
@@ -33,12 +33,13 @@
                     <td>
                       <img width="100px" src="{{url('/uploads/'.$event->image)}}" alt="">
                     </td>
-                    <td>{{$event->agency->name}}</td>
+
+                
 
                     <td>
-                        <a class="btn btn-primary" href="{{route('admin.event.view',$event->id)}}">View</a>
-                        <a class="btn btn-info" href="{{route('admin.event.edit',$event->id)}}">Edit</a>
-                        <a class="btn btn-danger" href="{{route('admin.event.delete',$event->id)}}">Delete</a>
+                        <a class="btn btn-primary" href="{{route('agency.event.view',$event->id)}}">View</a>
+                        <a class="btn btn-info" href="{{route('agency.event.edit',$event->id)}}">Edit</a>
+                        <a class="btn btn-danger" href="{{route('agency.event.delete',$event->id)}}">Delete</a>
                         <a class="btn btn-warning" href="{{route('admin.event.approve',$event->id)}}">Approve</a>
                     </td>
                 </tr>

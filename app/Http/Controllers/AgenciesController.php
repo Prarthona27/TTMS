@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers;
 use App\Models\Agencylist;
+use App\Models\User;
+
 use Illuminate\Http\Request;
 
 class AgenciesController extends Controller
@@ -24,13 +26,24 @@ class AgenciesController extends Controller
     }
     public function AgencyStore(Request $request)
     {
+        // dd($request->all());
+
+        $user = User::create([
+            'name'=>$request->name,
+            'email'=>$request->email,
+            'password'=>bcrypt($request->pass),
+            'mobile'=>$request->phone,
+            'role'=>$request->role
+        ]);
         Agencylist::create([
             //dd($request->all());
             //database name:: form name
+            'user_id'=>$user->id,
            'name'=>$request->name,
             'phone'=>$request->phone,
             'email'=>$request->email,
-            'addess'=>$request->address
+            'address'=>$request->address,
+            'password'=>bcrypt($request->pass),
         ]);
         return redirect()->back();
 }

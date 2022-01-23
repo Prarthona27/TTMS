@@ -1,7 +1,7 @@
 <?php
 
 namespace App\Models;
-
+use App\Models\Eventlist;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
@@ -11,7 +11,7 @@ class Travellerlist extends Model
     protected $table='travellers';
     protected $guarded=[];
 
-    public function traveller(){
-        return $this->belongsTo(Travellerlist::class,'Agency_id','id');
+    public function events(){
+        return $this->belongsTo(Eventlist::class,'Agency_id','id');
     }
 }

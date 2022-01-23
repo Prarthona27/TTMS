@@ -5,7 +5,7 @@ namespace App\Http\Middleware;
 use Closure;
 use Illuminate\Http\Request;
 
-class CheckAdmin
+class CheckAgency
 {
     /**
      * Handle an incoming request.
@@ -21,7 +21,7 @@ class CheckAdmin
         }
         else
         {
-            return redirect()->route('website')->with('error','Permission denied.');
+            return redirect()->route('home')->with('error','Permission denied.');
         }
 
     }

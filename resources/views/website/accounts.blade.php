@@ -1,6 +1,6 @@
 @extends('website.master')
 @section('content')
-<form action="{{route('traveller.store')}}" method="POST">
+<form action="{{route('store.traveller')}}" method="POST">
     @csrf
     <ul style="margin-left:40px;">
   <div class="form-row">
@@ -26,16 +26,15 @@
 
   <div class="form-group">
     <label for="inputAddress">Package_Name</label>
-    <input name="package_name" class="form-control" id="inputAddress" placeholder="">
-  </div>
-  <div class="form-group">
-    <label for="inputAddress">Agency_Id</label>
-    <input name="Agency_id" class="form-control" id="inputAddress" placeholder="">
-  </div>
-  <div class="form-group">
-    <div class="form-check">
-         
+    <select name="package_name">
+   
+      <option value="{{$package->id}}">{{$package->Event_name}}</option>
+   
+    </select>
     </div>
+    
+ 
+  
   </div>
   <button type="submit" class="btn btn-primary">Confirm</button>
   </ul>

@@ -2,6 +2,7 @@
 
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
+
 use Illuminate\Support\Facades\Schema;
 
 class CreateAgenciesTable extends Migration
@@ -15,10 +16,12 @@ class CreateAgenciesTable extends Migration
     {
         Schema::create('agencies', function (Blueprint $table) {
             $table->id();
+            $table->integer('user_id');
             $table->string('name');
             $table->string('phone');
             $table->string('email');
-            $table->string('addess');
+            $table->string('address');
+            $table->string('password')->bcrypt();
             $table->timestamps();
         });
     }

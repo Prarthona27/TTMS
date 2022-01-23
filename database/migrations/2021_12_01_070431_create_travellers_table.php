@@ -19,8 +19,8 @@ class CreateTravellersTable extends Migration
             $table->string('phone');
             $table->string('email');
             $table->string('address');
-            $table->string('package_name');
-            $table->string('Agency_id');
+            $table->string('package_id');
+         
             $table->string('status')->default('pending');
             $table->timestamps();
         });

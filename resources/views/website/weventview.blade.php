@@ -17,5 +17,5 @@
     </ul>
     <p>Place Image: <img width="400px" src="{{url('/uploads/'.$event->image)}}" alt=""></p>
 </div>
-<div class="btn_main"><a href="{{route('book.tour')}}">Book This Tour</a></div>
+<div class="btn_main"><a href="{{route('book.tour',$event->id)}}">Book This Tour</a></div>
 @endsection

@@ -51,7 +51,7 @@
                         {{session()->get('error')}}
                     </p>
                 @endif
-                <div id="login-box" class="col-md-12">
+                <div id="login-box" class="col-md-12"style="height: 24rem;">
 
 
 
@@ -65,6 +65,14 @@
                         <div class="form-group">
                             <label for="password" class="text-info">Password:</label><br>
                             <input type="password" name="password" id="password" class="form-control">
+                        </div>
+                        <div class="form-group">
+                            <label for="role" class="text-info">role:</label><br>
+                         
+                            <select name="role"type="text"class="form-control">
+                                <option value="admin">admin</option>
+                                <option value="agency">agency</option>
+</select>
                         </div>
                         <div class="form-group">
 

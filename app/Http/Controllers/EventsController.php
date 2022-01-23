@@ -100,7 +100,7 @@ class EventsController extends Controller
             'Event_Description3'=>$request->Event_Description3,
             'Event_Description4'=>$request->Event_Description4,
             'image'=>$filename,
-            'Agency_id'=>$request->Agency_name
+           
 
         ]);
         return redirect()->route('admin.events.eventlist')->with('success','Event Updated Successfully.');
@@ -127,9 +127,11 @@ class EventsController extends Controller
         return view('website.weventview',compact('event'));
     }
 
-    public function bookTour()
+    public function bookTour($package_id)
     {
-        return view('website.accounts');
+        // dd(auth()->user());
+        $package=Eventlist::find($package_id);
+        return view('website.accounts',compact('package'));
     }
     public function eventApprove($event_id)
     {

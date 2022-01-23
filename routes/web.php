@@ -21,7 +21,7 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
-
+//Admin
 Route::group(['prefix'=>'admin'],function (){
 
     //admin login
@@ -29,66 +29,56 @@ Route::group(['prefix'=>'admin'],function (){
     Route::post('/login',[AdminUserController::class,'doLogin'])->name('admin.doLogin');
     
 
-    Route::group(['middleware'=>['auth','admin']],function (){
+  Route::group(['middleware'=>['auth','admin']],function (){
       Route::get('/', function () {
         return view('admin.A_dashboard');
     })->name('home');
     Route::get('/admin', function () {
       return view('admin.A_dashboard');
-  });
-  
+    });
+
     Route::get('/logout',[AdminUserController::class,'Adminlogout'])->name('admin.logout');
 
     //events create by admin
+    
+    Route::get('event/approve/{event_id}',[EventsController::class,'eventApprove'])->name('admin.event.approve');
+    //agency add by admin
+    Route::get('/agencies',[AgenciesController::class,'widgets'])->name('admin.agencies');
+    Route::get('/agencies/Agencylist',[AgenciesController::class,'Agencylist'])->name('admin.agencies.agencylist');
+    Route::post('/agencies/AgencyStore',[AgenciesController::class,'AgencyStore'])->name('admin.agency.store');
 
-  Route::get('/events',[EventsController::class,'widgets'])->name('agency.events');
-  Route::get('/events/Eventlist',[EventsController::class,'Eventlist'])->name('agency.events.eventlist');
-  Route::post('/events/EventStore',[EventsController::class,'EventStore'])->name('event.store');
-  Route::get('event/view/{event_id}',[EventsController::class,'eventView'])->name('agency.event.view');
-  Route::get('event/edit/{event_id}',[EventsController::class,'eventEdit'])->name('agency.event.edit');
-  Route::put('event/update/{event_id}',[EventsController::class,'eventUpdate'])->name('agency.event.update');
-  Route::get('event/delete/{event_id}',[EventsController::class,'eventDelete'])->name('agency.event.delete');
-  Route::get('event/approve/{event_id}',[EventsController::class,'eventApprove'])->name('admin.event.approve');
+    //traveller add by admin
+
+    Route::get('/travellers',[TravellersController::class,'widgets'])->name('admin.travellers');
+    Route::get('/travellers/Travellerlist',[TravellersController::class,'Travellerlist'])->name('admin.travellers.travellerlist');
+    
+    Route::get('traveller/approve/{traveller_id}',[TravellersController::class,'travellerApprove'])->name('admin.traveller.approve');
   
-  //agency add by admin
+    //destination add by admin
 
-  Route::get('/agencies',[AgenciesController::class,'widgets'])->name('admin.agencies');
-  Route::get('/agencies/Agencylist',[AgenciesController::class,'Agencylist'])->name('admin.agencies.agencylist');
-  Route::post('/agencies/AgencyStore',[AgenciesController::class,'AgencyStore'])->name('agency.store');
-
- 
-
-  //traveller add by admin
-
-  Route::get('/travellers',[TravellersController::class,'widgets'])->name('admin.travellers');
-  Route::get('/travellers/Travellerlist',[TravellersController::class,'Travellerlist'])->name('admin.travellers.travellerlist');
-  Route::post('/travellers/TravellerStore',[TravellersController::class,'TravellerStore'])->name('traveller.store');;
-  Route::get('traveller/approve/{traveller_id}',[TravellersController::class,'travellerApprove'])->name('admin.traveller.approve');
- 
-  //destination add by admin
-
-  Route::get('/destinations',[DestinationsController::class,'widgets'])->name('admin.destinations');
-  Route::get('/destinations/Destinationlist',[DestinationsController::class,'Destinationlist'])->name('admin.destinations.destinationlist');
-  Route::post('/destinations/DestinationStore',[DestinationsController::class,'DestinationStore'])->name('destination.store');
-  Route::get('destination/view/{destination_id}',[DestinationsController::class,'destinationView'])->name('admin.destination.view');
-  Route::get('destination/edit/{destination_id}',[DestinationsController::class,'destinationEdit'])->name('admin.destination.edit');
-  Route::put('destination/update/{destination_id}',[DestinationsController::class,'destinationUpdate'])->name('admin.destination.update');
-  Route::get('destination/delete/{destination_id}',[DestinationsController::class,'destinationDelete'])->name('admin.destination.delete');
+    Route::get('/destinations',[DestinationsController::class,'widgets'])->name('admin.destinations');
+    Route::get('/destinations/Destinationlist',[DestinationsController::class,'Destinationlist'])->name('admin.destinations.destinationlist');
+    Route::post('/destinations/DestinationStore',[DestinationsController::class,'DestinationStore'])->name('destination.store');
+    Route::get('destination/view/{destination_id}',[DestinationsController::class,'destinationView'])->name('admin.destination.view');
+    Route::get('destination/edit/{destination_id}',[DestinationsController::class,'destinationEdit'])->name('admin.destination.edit');
+    Route::put('destination/update/{destination_id}',[DestinationsController::class,'destinationUpdate'])->name('admin.destination.update');
+    Route::get('destination/delete/{destination_id}',[DestinationsController::class,'destinationDelete'])->name('admin.destination.delete');
 
 
-  //create account
-  Route::get('/accounts/Travellerlist',[TravellersController::class,'Travellerlist'])->name('admin.accounts.travellerlist');
+    //traveller list
+    Route::get('/accounts/Travellerlist',[TravellersController::class,'Travellerlist'])->name('admin.accounts.travellerlist');
 
-  //view agencies
+    //view agencies
 
-  Route::get('/agencies/WagencyList',[AgenciesController::class,'WagencyList'])->name('admin.agencies.WagencyList');
+    Route::get('/agencies/WagencyList',[AgenciesController::class,'WagencyList'])->name('admin.agencies.WagencyList');
 
-});
+  });
 });
 
 
 
-  //user login
+  //website
+  Route::get('/events/Eventlist',[EventsController::class,'Eventlist'])->name('agency.events.eventlist');
 Route::get('/',[HomeController::class,'home'])->name('website');
 Route::post('/registration',[UserController::class,'registration'])->name('user.registration');
 Route::post('/login',[UserController::class,'login'])->name('user.login');
@@ -96,11 +86,21 @@ Route::get('/logout',[UserController::class,'logout'])->name('user.logout');
 Route::get('event/details/{event_id}',[EventsController::class,'W_eventView'])->name('website.event.view');
 Route::get('destination/details/{destination_id}',[DestinationsController::class,'W_destinationView'])->name('website.destination.view');
 
-Route::get('/book/tour',[EventsController::class,'bookTour'])->name('book.tour');
-
+Route::get('/book/tour/{package_id}',[EventsController::class,'bookTour'])->name('book.tour');
+Route::post('/travellers/TravellerStore',[TravellersController::class,'TravellerStore'])->name('store.traveller');
 //website index
 
 
-// Route::get('/', function () {
-//   return view(view: 'website.home');
-// });
+
+//agency
+Route::group(['prefix'=>'agency'],function (){
+  Route::group(['middleware'=>['auth','agency']],function (){
+    Route::get('/events',[EventsController::class,'widgets'])->name('agency.events');
+    
+    Route::post('/events/EventStore',[EventsController::class,'EventStore'])->name('agency.store');
+    Route::get('event/view/{event_id}',[EventsController::class,'eventView'])->name('agency.event.view');
+    Route::get('event/edit/{event_id}',[EventsController::class,'eventEdit'])->name('agency.event.edit');
+    Route::put('event/update/{event_id}',[EventsController::class,'eventUpdate'])->name('agency.event.update');
+    Route::get('event/delete/{event_id}',[EventsController::class,'eventDelete'])->name('agency.event.delete');
+  });
+});

@@ -9,7 +9,8 @@ class TravellersController extends Controller
 {
    //to view traveller form
    public function widgets(){
-    return view('website.accounts');
+       $agency=Agencylist::all();
+    return view('website.accounts',compact('agency'));
 }
 //to view travellerlist
 public function Travellerlist(){
@@ -18,6 +19,8 @@ public function Travellerlist(){
 }
 public function TravellerStore(Request $request)
 {
+
+  
     Travellerlist::create([
         //dd($request->all());
         //database name:: form name
@@ -25,10 +28,10 @@ public function TravellerStore(Request $request)
         'phone'=>$request->phone,
         'email'=>$request->email,
         'address'=>$request->address,
-        'package_name'=>$request->package_name,
-        'Agency_id'=>$request->Agency_id
+        'package_id'=>$request->package_name
+       
     ]);
-    return redirect()->back();
+    return redirect()->route('website');
 }
 
 public function travellerApprove($traveller_id){
