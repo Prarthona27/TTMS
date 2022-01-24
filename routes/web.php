@@ -3,6 +3,7 @@
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\EventsController;
 use App\Http\Controllers\AgenciesController;
+use App\Http\Controllers\ReportController;
 use App\Http\Controllers\TravellersController;
 use App\Http\Controllers\DestinationsController;
 use App\Http\Controllers\Website\HomeController;
@@ -46,6 +47,10 @@ Route::group(['prefix'=>'admin'],function (){
     Route::get('/agencies',[AgenciesController::class,'widgets'])->name('admin.agencies');
     Route::get('/agencies/Agencylist',[AgenciesController::class,'Agencylist'])->name('admin.agencies.agencylist');
     Route::post('/agencies/AgencyStore',[AgenciesController::class,'AgencyStore'])->name('admin.agency.store');
+
+
+    Route::get('/report',[ReportController::class,'getreport'])->name('admin.report');
+    Route::post('/report',[ReportController::class,'searchreport'])->name('admin.report.search');
 
     //traveller add by admin
 

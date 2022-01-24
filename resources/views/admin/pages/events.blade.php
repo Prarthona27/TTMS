@@ -37,7 +37,7 @@
     <input type="datetime-local" name="Event_Description4" class="form-control" id="inputAddress" placeholder="">
   </div>
   <div class="form-group">
-    <label for="inputAddress">Agency Id</label>
+    <label for="inputAddress">Agency Name</label>
     <select class="form-control"name="Agency_name">
       @foreach($agency as $agency)
       <option value="{{$agency->id}}">{{$agency->name}}</option>

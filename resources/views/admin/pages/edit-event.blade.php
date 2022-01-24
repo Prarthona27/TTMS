@@ -11,7 +11,7 @@
     </p>
 @endif
 
-<form action="{{route('admin.event.update',$event->id)}}" method="POST" enctype="multipart/form-data">
+<form action="{{route('agency.event.update',$event->id)}}" method="POST" enctype="multipart/form-data">
     @method('PUT')
     @csrf
     <div class="mb-3">
@@ -59,7 +59,7 @@
     </div> 
    
 
-    <button type="submit" class="btn btn-success">Edit</button>
+    <button type="submit" class="btn btn-success">Update</button>
    
 </form>
 

@@ -8,7 +8,7 @@
             <div class="services_section_1">
                <div class="row">
                @foreach ($package as $package)
-                  <div class="col-md-4">
+                  <div class="col-md-4" style="padding: 24px;">
                      <div><img style="height: 250px;"src="{{url('/uploads/'.$package->image)}}" class="services_img"></div>
                      <div class="btn_main"><a href="{{route('website.event.view',$package->id)}}">Details</a></div>
                   </div>
@@ -30,7 +30,7 @@
             <div class="services_section_1">
                <div class="row">
                @foreach ($destination as $destination)
-                  <div class="col-md-4">
+                  <div class="col-md-4" style="padding: 24px;">
                      <div><img style="height: 250px;"src="{{url('/uploads/'.$destination->image)}}" class="services_img"></div>
                      <div class="btn_main"><a href="{{route('website.destination.view',$destination->id)}}">Details</a></div>
                   </div>

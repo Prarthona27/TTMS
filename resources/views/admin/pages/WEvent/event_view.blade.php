@@ -9,6 +9,7 @@
     <p>Event Description: {{$event->Event_Description3}}</p>
     <p>Event Description: {{$event->Event_Description4}}</p>
     <p>Agency Id: {{$event->Agency_id}}</p>
+    <p>Agency Name: {{$event->Agency_name}}</p>
     <p>Place Image: <img width="100px" src="{{url('/uploads/'.$event->image)}}" alt=""></p>
     
 </div>

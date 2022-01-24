@@ -103,7 +103,7 @@ class EventsController extends Controller
            
 
         ]);
-        return redirect()->route('admin.events.eventlist')->with('success','Event Updated Successfully.');
+        return redirect()->route('agency.events.eventlist')->with('success','Event Updated Successfully.');
 
     }
     public function eventView($event_id)

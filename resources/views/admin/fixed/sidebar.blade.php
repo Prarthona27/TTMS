@@ -30,7 +30,8 @@
 			<li><a href="{{route('admin.agencies')}}"><em class="fa fa-users">&nbsp;</em> Agency</a></li>
 			
 			<li><a href="{{route('admin.destinations')}}"><em class="glyphicon glyphicon-tent">&nbsp;</em> Destination</a></li>
-			<li><a href="panels.html"><em class="fa fa-question">&nbsp;</em> Questionnaire  </a></li>
+			<li><a href="{{route('admin.report')}}"><em class="glyphicon glyphicon-tent">&nbsp;</em> Report</a></li>
+			
 			@endif
 			<li class="parent "><a data-toggle="collapse" href="#sub-item-1">
 				<em class="fa fa-navicon">&nbsp;</em> Multilevel <span data-toggle="collapse" href="#sub-item-1" class="icon pull-right"><em class="fa fa-plus"></em></span>

@@ -12,6 +12,7 @@
       <th scope="col">Event Description2</th>
       <th scope="col">Event Description3</th>
       <th scope="col">Event Description4</th>
+      <th scope="col">Agency Name</th>
       <th scope="col">Place Image</th>
     
       <th scope="col">Action</th>
@@ -30,6 +31,7 @@
                     <td>{{$event->Event_Description2}}</td>
                     <td>{{$event->Event_Description3}}</td>
                     <td>{{$event->Event_Description4}}</td>
+                    <td>{{$event->Agency_name}}</td>
                     <td>
                       <img width="100px" src="{{url('/uploads/'.$event->image)}}" alt="">
                     </td>
