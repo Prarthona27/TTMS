@@ -54,9 +54,7 @@
                         <li class="nav-item">
                            <a class="nav-link" href="index.html">Home</a>
                         </li>
-                        <li class="nav-item">
-                           <a class="nav-link" href="{{route('admin.agencies.agencylist')}}">Agencies</a>
-                        </li>
+                        
                         <li class="nav-item">
                            <a class="nav-link" href="services.html">Packages</a>
                         </li>
@@ -74,12 +72,12 @@
                <div class="menu_main">
                   <ul>
                      <li class="active"><a href="index.html">Home</a></li>
-                     <li><a href="{{route('admin.agencies.WagencyList')}}">Agencies</a></li>
-                     <li><a href="#">My Account</a></li>
+                     <li><a href="{{route('admin.agencies.WagencyList')}}">Agencies</a></li> 
+                    
                    
                    @if(auth()->user())
                     <!-- Button trigger modal -->
-
+                    <li><a href="{{route('view.profile',auth()->user()->id)}}">My Account</a></li>
                         <li><a href="{{route('user.logout')}}" class="btn btn-success">{{auth()->user()->name}} | Logout</a></li>
 
                         @else

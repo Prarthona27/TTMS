@@ -7,6 +7,7 @@ use App\Http\Controllers\ReportController;
 use App\Http\Controllers\TravellersController;
 use App\Http\Controllers\DestinationsController;
 use App\Http\Controllers\Website\HomeController;
+use App\Http\Controllers\Website\FeedbackController;
 use App\Http\Controllers\Website\UserController;
 use App\Http\Controllers\Admin\UserController as AdminUserController;
 Use Illuminate\Routing\Route as RoutingRoute; 
@@ -43,6 +44,8 @@ Route::group(['prefix'=>'admin'],function (){
     //events create by admin
     
     Route::get('event/approve/{event_id}',[EventsController::class,'eventApprove'])->name('admin.event.approve');
+    Route::get('event/cancel/{event_id}',[EventsController::class,'eventCancel'])->name('admin.event.cancel');
+
     //agency add by admin
     Route::get('/agencies',[AgenciesController::class,'widgets'])->name('admin.agencies');
     Route::get('/agencies/Agencylist',[AgenciesController::class,'Agencylist'])->name('admin.agencies.agencylist');
@@ -58,6 +61,7 @@ Route::group(['prefix'=>'admin'],function (){
     Route::get('/travellers/Travellerlist',[TravellersController::class,'Travellerlist'])->name('admin.travellers.travellerlist');
     
     Route::get('traveller/approve/{traveller_id}',[TravellersController::class,'travellerApprove'])->name('admin.traveller.approve');
+    Route::get('traveller/cancel/{traveller_id}',[TravellersController::class,'travellerCancel'])->name('admin.traveller.cancel');
   
     //destination add by admin
 
@@ -93,6 +97,15 @@ Route::get('destination/details/{destination_id}',[DestinationsController::class
 
 Route::get('/book/tour/{package_id}',[EventsController::class,'bookTour'])->name('book.tour');
 Route::post('/travellers/TravellerStore',[TravellersController::class,'TravellerStore'])->name('store.traveller');
+Route::get('/profile/{user_id}',[UserController::class,'profile'])->name('view.profile');
+
+Route::get('/mytour',[TravellersController::class,'MyTourList'])->name('my.TourList');
+
+//user feedback
+Route::get('/feedback/view',[FeedbackController::class,'feedbackView'])->name('view.feedback');
+Route::post('/feedback/store',[FeedbackController::class,'feedbackstore'])->name('store.feedback');
+Route::get('feedback/list',[FeedbackController::class,'feedbacklist'])->name('feedback.list');
+Route::get('feedback/approve/{feedback_id}',[FeedbackController::class,'feedbackApprove'])->name('admin.feedback.approve');
 //website index
 
 

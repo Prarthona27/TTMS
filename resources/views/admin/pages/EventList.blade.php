@@ -36,13 +36,14 @@
                       <img width="100px" src="{{url('/uploads/'.$event->image)}}" alt="">
                     </td>
 
-                
+                    
 
                     <td>
                         <a class="btn btn-primary" href="{{route('agency.event.view',$event->id)}}">View</a>
                         <a class="btn btn-info" href="{{route('agency.event.edit',$event->id)}}">Edit</a>
                         <a class="btn btn-danger" href="{{route('agency.event.delete',$event->id)}}">Delete</a>
-                        <a class="btn btn-warning" href="{{route('admin.event.approve',$event->id)}}">Approve</a>
+                        <a class="btn btn-success" href="{{route('admin.event.approve',$event->id)}}">Approve</a>
+                        <a class="btn btn-warning" href="{{route('admin.event.cancel',$event->id)}}">Cancel</a>
                     </td>
                 </tr>
             @endforeach      

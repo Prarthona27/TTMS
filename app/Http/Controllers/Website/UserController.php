@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Website;
 
 use App\Http\Controllers\Controller;
 use App\Models\User;
+use App\Models\Travellerlist;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 
@@ -47,5 +48,11 @@ class UserController extends Controller
     {
         Auth::logout();
         return redirect()->route('website')->with('message','Logging out.');
+    }
+
+
+    public function profile($user_id){
+$user=User::find($user_id);
+return view('website.profile',compact('user'));
     }
 }

@@ -30,7 +30,8 @@
 			<li><a href="{{route('admin.agencies')}}"><em class="fa fa-users">&nbsp;</em> Agency</a></li>
 			
 			<li><a href="{{route('admin.destinations')}}"><em class="glyphicon glyphicon-tent">&nbsp;</em> Destination</a></li>
-			<li><a href="{{route('admin.report')}}"><em class="glyphicon glyphicon-tent">&nbsp;</em> Report</a></li>
+			<li><a href="{{route('admin.report')}}"><em class="fa fa-bar-chart">&nbsp;</em> Report</a></li>
+			<li><a href="{{route('feedback.list')}}"><em class="fa fa-bar-chart">&nbsp;</em> Feedback</a></li>
 			
 			@endif
 			<li class="parent "><a data-toggle="collapse" href="#sub-item-1">
@@ -46,13 +47,14 @@
 					<li><a class="" href="{{route('admin.agencies.agencylist')}}">
 						<span class="fa fa-arrow-right">&nbsp;</span> Agencies
 					</a></li>
+					<li><a class="" href="{{route('admin.destinations.destinationlist')}}">
+						<span class="fa fa-arrow-right">&nbsp;</span> Destination
+					</a></li>
 					@endif
 					<li><a class="" href="{{route('admin.travellers.travellerlist')}}">
 						<span class="fa fa-arrow-right">&nbsp;</span> Traveller
 					</a></li>
-					<li><a class="" href="{{route('admin.destinations.destinationlist')}}">
-						<span class="fa fa-arrow-right">&nbsp;</span> Destination
-					</a></li>
+					
 
 				</ul>
 			

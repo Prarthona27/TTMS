@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 use App\Models\Eventlist;
-
+use App\Models\User;
 use App\Models\Agencylist;
 use Illuminate\Http\Request;
 
@@ -130,8 +130,9 @@ class EventsController extends Controller
     public function bookTour($package_id)
     {
         // dd(auth()->user());
+        $users=User::all();
         $package=Eventlist::find($package_id);
-        return view('website.accounts',compact('package'));
+        return view('website.accounts',compact('package','users'));
     }
     public function eventApprove($event_id)
     {

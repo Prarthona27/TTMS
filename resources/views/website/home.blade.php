@@ -48,69 +48,71 @@
  <div class="client_section layout_padding">
          <div class="container">
             <h1 class="client_taital">Feedback</h1>
+            
+            <a href="{{route('view.feedback')}}"style="margin-left:32rem;">Add Feedback</a>
             <div class="client_section_2">
                <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+                  
                   <ol class="carousel-indicators">
                      <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
                      <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
                      <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
                   </ol>
+                  
                   <div class="carousel-inner">
-                     <div class="carousel-item active">
-                        <div class="client_main">
-                           <div class="box_left">
-                              <p class="lorem_text">The perfect combination- lone travelling , excellent organisation and the best of experiences , thank you .</p>
+                     @if(count($feedback)>0)
+                  <div class="carousel-item active">
+                     
+                     <div class="client_main">
+                        <div class="box_left">
+                           <p class="lorem_text"></p>
+                        </div>
+                        <div class="box_right">
+                           <div class="client_taital_left">
+                          
+                              <div class="quick_icon"><img src="{{url('userp/images/quick-icon.png')}}"></div>
                            </div>
-                           <div class="box_right">
-                              <div class="client_taital_left">
-                                 <div class="client_img"><img style="height: 100px;"src="{{url('userp/images/client-img.png')}}"></div>
-                                 <div class="quick_icon"><img src="{{url('userp/images/quick-icon.png')}}"></div>
-                              </div>
-                              <div class="client_taital_right">
-                                 <h4 class="client_name">Dame</h4>
-                                 <p class="customer_text">Customer</p>
-                              </div>
+                           <div class="client_taital_right">
+                              <h4 class="client_name">qqq</h4>
+                              <p class="customer_text">123ed</p>
                            </div>
                         </div>
                      </div>
+                     
+                  </div>
+                  @endif
+               
+                  @foreach($feedback as $feedback)
                      <div class="carousel-item">
+                     
                         <div class="client_main">
                            <div class="box_left">
-                              <p class="lorem_text">A well planned , varied experience with excellent prior planning and local knowledge. Very interesting, different hotels. The local drivers and guides made us feel welcome and at home in their communities.</p>
+                              <p class="lorem_text">{{$feedback->feedback}}</p>
                            </div>
                            <div class="box_right">
                               <div class="client_taital_left">
-                                 <div class="client_img"><img src="{{url('userp/images/client-img1.png')}}"></div>
+                             
                                  <div class="quick_icon"><img src="{{url('userp/images/quick-icon.png')}}"></div>
                               </div>
                               <div class="client_taital_right">
-                                 <h4 class="client_name">Rose</h4>
-                                 <p class="customer_text">Customer</p>
+                                 <h4 class="client_name">{{$feedback->user->name}}</h4>
+                                 <p class="customer_text">{{$feedback->user->email}}</p>
                               </div>
                            </div>
                         </div>
+                        
                      </div>
-                     <div class="carousel-item">
-                        <div class="client_main">
-                           <div class="box_left">
-                              <p class="lorem_text">A compelling mix of city , hills , safari and beach interwoven with local cultural , scenic and culinary experience .</p>
-                           </div>
-                           <div class="box_right">
-                              <div class="client_taital_left">
-                                 <div class="client_img"><img style="height: 150px;"src="{{url('userp/images/client-image.jpg')}}"></div>
-                                 <div class="quick_icon"><img src="{{url('userp/images/quick-icon.png')}}"></div>
-                              </div>
-                              <div class="client_taital_right">
-                                 <h4 class="client_name">Elsa</h4>
-                                 <p class="customer_text">Customer</p>
-                              </div>
-                           </div>
-                        </div>
-                     </div>
+                  
+                     @endforeach
+                    
+                     
                   </div>
                </div>
+               
             </div>
+         
          </div>
+         
       </div>
       <!-- client section start -->
 

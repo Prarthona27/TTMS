@@ -2,19 +2,21 @@
 
 namespace App\Http\Controllers;
 use App\Models\Travellerlist;
-
+use App\Models\User;
 use Illuminate\Http\Request;
 
 class TravellersController extends Controller
 {
    //to view traveller form
    public function widgets(){
+       $users=User::all();
        $agency=Agencylist::all();
-    return view('website.accounts',compact('agency'));
+    return view('website.accounts',compact('agency','users'));
 }
 //to view travellerlist
 public function Travellerlist(){
-    $travellers=Travellerlist::all();
+    $travellers=Travellerlist::with('events')->get();
+
     return view('admin.pages.TravellerList',compact('travellers'));
 }
 public function TravellerStore(Request $request)
@@ -24,10 +26,8 @@ public function TravellerStore(Request $request)
     Travellerlist::create([
         //dd($request->all());
         //database name:: form name
-        'name'=>$request->name,
-        'phone'=>$request->phone,
-        'email'=>$request->email,
-        'address'=>$request->address,
+        'user_id'=>$request->email,
+      
         'package_id'=>$request->package_name
        
     ]);
@@ -45,4 +45,16 @@ public function travellerApprove($traveller_id){
       }
     
 }
+public function MyTourList(){
+    {
+        // dd($traveller_id);
+        $traveller=Travellerlist::where('user_id',auth()->user()->id)->get();
+        // dd( $traveller);
+       return view('website.MyTour',compact('traveller'));
+      }
+    
+}
+
+
+
 }

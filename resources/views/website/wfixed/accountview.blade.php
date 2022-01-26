@@ -6,6 +6,7 @@
     <p>Email: {{$traveller->email}}</p>
     <p>Address: {{$traveller->address}}</p>
     <p>Package Name: {{$traveller->package_name}}</p>
+    
 </div>
 @endsection
 

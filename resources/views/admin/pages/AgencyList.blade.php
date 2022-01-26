@@ -17,7 +17,7 @@
                     <td>{{$agency->name}}</td>
                     <td>{{$agency->phone}}</td>
                     <td>{{$agency->email}}</td>
-                    <td>{{$agency->addess}}</td>
+                    <td>{{$agency->address}}</td>
                 </tr>
             @endforeach      
   </tbody>

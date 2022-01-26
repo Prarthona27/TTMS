@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateTravellersTable extends Migration
+class CreateFeedbackTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,14 +13,10 @@ class CreateTravellersTable extends Migration
      */
     public function up()
     {
-        Schema::create('travellers', function (Blueprint $table) {
+        Schema::create('feedback', function (Blueprint $table) {
             $table->id();
-            
-           $table->integer('user_id');
-      
-        
-            $table->string('package_id');
-         
+            $table->integer('user_id');
+            $table->string('feedback');
             $table->string('status')->default('pending');
             $table->timestamps();
         });
@@ -33,6 +29,6 @@ class CreateTravellersTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('travellers');
+        Schema::dropIfExists('feedback');
     }
 }
