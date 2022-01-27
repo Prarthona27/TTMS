@@ -31,13 +31,13 @@
                     <td>{{$event->Event_Description2}}</td>
                     <td>{{$event->Event_Description3}}</td>
                     <td>{{$event->Event_Description4}}</td>
-                    <td>{{$event->Agency_name}}</td>
+                    <td>{{$event->agency->name}}</td>
                     <td>
                       <img width="100px" src="{{url('/uploads/'.$event->image)}}" alt="">
                     </td>
 
                     
-
+                    
                     <td>
                         <a class="btn btn-primary" href="{{route('agency.event.view',$event->id)}}">View</a>
                         <a class="btn btn-info" href="{{route('agency.event.edit',$event->id)}}">Edit</a>

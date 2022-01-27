@@ -3,24 +3,21 @@
 
 <div class="form-row">
 
-<div class="form-group">
-    <form action="{{route('admin.report')}}" method="post">
+<div class="form-group col-md-6">
+    <form action="{{route('admin.eventreport')}}" method="post">
         @csrf
-        <div style="display: flex; justify-content: space-between;">
-        <div class="col-lg-6"><label for="inputPassword4">From date</label>
-        <input name="from" class="form-control" id="inputPassword4"  type="date" placeholder=""></div>
-        
-       
-        <div class="form-group col-lg-6">
+        <label for="inputPassword4">From date</label>
+        <input name="from" class="form-control" id="inputPassword4"  type="date" placeholder="">
+        </div>
+        <div class="form-group col-md-6">
         <label for="inputPassword4">To date</label>
         <input name="to" class="form-control" id="inputPassword4"  type="date" placeholder="">
         </div>
-        </div>
-        <button type="submit"class="btn btn-info">Submit</button>
+        <button type="submit" class="btn btn-info">Submit</button>
         
-        
+     
+  
     </form>
-    
 
     </div>
     <div id="divToPrint">
@@ -29,19 +26,24 @@
     <tr>
       <th scope="col">id</th>
 
-      <th scope="col">Email</th>
+      <th scope="col">Event Name</th>
   
-      <th scope="col">Package Name</th>
+      <th scope="col">Event Time</th>
+
+      <th scope="col">Agency Name</th>
+
     </tr>
   </thead> 
   <tbody>
-  @foreach($travellers as $traveller)
+  @foreach($events as $event)
       <tr>
-        <th>{{$traveller->id}}</th>
+        <th>{{$event->id}}</th>
 
-          <td>{{$traveller->user->email}}</td>
+          <td>{{$event->Event_name}}</td>
 
-          <td>{{optional($traveller->events)->Event_name}}</td>
+          <td>{{$event->Event_time}}</td>
+
+          <td>{{$event->agency->name}}</td>
        
       </tr>
      @endforeach
@@ -52,7 +54,6 @@
   </div>
 
 @endsection
-
 <script language="javascript">
     function PrintDiv(divName) {
         var printContents = document.getElementById(divName).innerHTML;

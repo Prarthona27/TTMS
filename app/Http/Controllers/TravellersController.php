@@ -45,6 +45,20 @@ public function travellerApprove($traveller_id){
       }
     
 }
+
+public function travellerCancel($traveller_id){
+    {
+        // dd($traveller_id);
+        $traveller=Travellerlist::find($traveller_id);
+        $traveller->update([
+          'status'=>'canceled'
+        ]);
+          return redirect()->back();
+      }
+    
+}
+
+
 public function MyTourList(){
     {
         // dd($traveller_id);

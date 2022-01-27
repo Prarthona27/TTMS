@@ -28,7 +28,7 @@
                     <td>
                 
                          <a class="btn btn-warning" href="{{route('admin.traveller.approve',$traveller->id)}}">Approve</a>
-                
+                         <a class="btn btn-danger" href="{{route('admin.traveller.cancel',$traveller->id)}}">Cancel</a>
                    
                 
                          

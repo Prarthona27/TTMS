@@ -142,5 +142,13 @@ class EventsController extends Controller
       ]);
         return redirect()->back();
     }
+    public function eventCancel($event_id)
+    {
+      $event=Eventlist::find($event_id);
+      $event->update([
+        'status'=>'canceled'
+      ]);
+        return redirect()->back();
+    }
 
 }

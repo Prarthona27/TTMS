@@ -51,9 +51,7 @@
                   </button>
                   <div class="collapse navbar-collapse" id="navbarNav">
                      <ul class="navbar-nav">
-                        <li class="nav-item">
-                           <a class="nav-link" href="index.html">Home</a>
-                        </li>
+                        >
                         
                         <li class="nav-item">
                            <a class="nav-link" href="services.html">Packages</a>
@@ -71,14 +69,14 @@
                <div class="logo"><a href="index.html"><img src=""></a></div>
                <div class="menu_main">
                   <ul>
-                     <li class="active"><a href="index.html">Home</a></li>
+                     <li class="active"><a href="{{route('website')}}">Home</a></li>
                      <li><a href="{{route('admin.agencies.WagencyList')}}">Agencies</a></li> 
                     
                    
                    @if(auth()->user())
                     <!-- Button trigger modal -->
                     <li><a href="{{route('view.profile',auth()->user()->id)}}">My Account</a></li>
-                        <li><a href="{{route('user.logout')}}" class="btn btn-success">{{auth()->user()->name}} | Logout</a></li>
+                        <li><a href="{{route('user.logout')}}" class="">{{auth()->user()->name}} | Logout</a></li>
 
                         @else
                         

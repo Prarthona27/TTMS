@@ -4,6 +4,7 @@ use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\EventsController;
 use App\Http\Controllers\AgenciesController;
 use App\Http\Controllers\ReportController;
+use App\Http\Controllers\EventreportController;
 use App\Http\Controllers\TravellersController;
 use App\Http\Controllers\DestinationsController;
 use App\Http\Controllers\Website\HomeController;
@@ -45,6 +46,9 @@ Route::group(['prefix'=>'admin'],function (){
     
     Route::get('event/approve/{event_id}',[EventsController::class,'eventApprove'])->name('admin.event.approve');
     Route::get('event/cancel/{event_id}',[EventsController::class,'eventCancel'])->name('admin.event.cancel');
+
+    Route::get('/eventreport',[EventreportController::class,'getreport'])->name('admin.eventreport');
+    Route::post('/eventreport',[EventreportController::class,'searchreport'])->name('admin.eventreport.search');
 
     //agency add by admin
     Route::get('/agencies',[AgenciesController::class,'widgets'])->name('admin.agencies');
