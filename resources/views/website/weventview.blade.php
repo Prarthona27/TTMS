@@ -1,6 +1,8 @@
 @extends('website.master')
 @section('content')
 <div class="container">
+<p>Event Name: {{$event->agency->name}}</p>
+<p>Event Name: {{$event->agency->id}}</p>
     <p>Event Name: {{$event->Event_name}}</p>
     <p>Event Time: {{$event->Event_time}}</p>
     <p>Package Description: {{$event->Event_Description}}</p>

@@ -70,7 +70,7 @@
                <div class="menu_main">
                   <ul>
                      <li class="active"><a href="{{route('website')}}">Home</a></li>
-                     <li><a href="{{route('admin.agencies.WagencyList')}}">Agencies</a></li> 
+                     
                     
                    
                    @if(auth()->user())

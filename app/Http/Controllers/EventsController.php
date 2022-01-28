@@ -113,6 +113,7 @@ class EventsController extends Controller
 //       object= first(), find(), findOrFail(),======direct
       $event=Eventlist::find($event_id);
 //      $product=Product::where('id',$product_id)->first();
+
         return view('admin.pages.WEvent.event_view',compact('event'));
     }
 
@@ -122,7 +123,8 @@ class EventsController extends Controller
 
 //        collection= get(), all()====== read with loop (foreach)
 //       object= first(), find(), findOrFail(),======direct
-      $event=Eventlist::find($event_id);
+      $event=Eventlist::with('agency')->find($event_id);
+
 //      $product=Product::where('id',$product_id)->first();
         return view('website.weventview',compact('event'));
     }

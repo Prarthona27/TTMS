@@ -3,17 +3,20 @@
 
 <div class="form-row">
 
-<div class="form-group col-md-6">
+<div class="form-group">
     <form action="{{route('admin.eventreport')}}" method="post">
         @csrf
-        <label for="inputPassword4">From date</label>
-        <input name="from" class="form-control" id="inputPassword4"  type="date" placeholder="">
-        </div>
-        <div class="form-group col-md-6">
+        <div style="display: flex; justify-content: space-between;">
+        <div class="col-lg-6"><label for="inputPassword4">From date</label>
+        <input name="from" class="form-control" id="inputPassword4"  type="date" placeholder=""></div>
+        
+       
+        <div class="form-group col-lg-6">
         <label for="inputPassword4">To date</label>
         <input name="to" class="form-control" id="inputPassword4"  type="date" placeholder="">
         </div>
-        <button type="submit" class="btn btn-info">Submit</button>
+        </div>
+        <button type="submit"class="btn btn-info">Submit</button>
         
      
   

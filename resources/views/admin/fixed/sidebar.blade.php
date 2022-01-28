@@ -30,9 +30,9 @@
 			<li><a href="{{route('admin.agencies')}}"><em class="fa fa-users">&nbsp;</em> Agency</a></li>
 			
 			<li><a href="{{route('admin.destinations')}}"><em class="glyphicon glyphicon-tent">&nbsp;</em> Destination</a></li>
-			<li><a href="{{route('admin.report')}}"><em class="fa fa-bar-chart">&nbsp;</em> Report</a></li>
-			<li><a href="{{route('admin.eventreport')}}"><em class="fa fa-bar-chart">&nbsp;</em>Events Report</a></li>
-			<li><a href="{{route('feedback.list')}}"><em class="fa fa-bar-chart">&nbsp;</em> Feedback</a></li>
+			<li><a href="{{route('admin.report')}}"><em class="fa fa-users">&nbsp;</em>Travellers Report</a></li>
+			<li><a href="{{route('admin.eventreport')}}"><em class="fa fa-calendar-check-o">&nbsp;</em>Events Report</a></li>
+			<li><a href="{{route('feedback.list')}}"><em class="fa fa-pencil-square-o">&nbsp;</em> Feedback</a></li>
 			
 			@endif
 			<li class="parent "><a data-toggle="collapse" href="#sub-item-1">

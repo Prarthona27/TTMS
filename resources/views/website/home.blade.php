@@ -61,11 +61,11 @@
                   
                   <div class="carousel-inner">
                      @if(count($feedback)>0)
-                  <div class="carousel-item active">
+                     <div class="carousel-item active">
                      
                      <div class="client_main">
                         <div class="box_left">
-                           <p class="lorem_text"></p>
+                           <p class="lorem_text">{{$feedback[0]->feedback}}</p>
                         </div>
                         <div class="box_right">
                            <div class="client_taital_left">
@@ -73,13 +73,14 @@
                               <div class="quick_icon"><img src="{{url('userp/images/quick-icon.png')}}"></div>
                            </div>
                            <div class="client_taital_right">
-                              <h4 class="client_name">qqq</h4>
-                              <p class="customer_text">123ed</p>
+                              <h4 class="client_name">{{$feedback[0]->user->name}}</h4>
+                              <p class="customer_text">{{$feedback[0]->user->email}}</p>
                            </div>
                         </div>
                      </div>
                      
                   </div>
+               
                   @endif
                
                   @foreach($feedback as $feedback)
@@ -121,10 +122,7 @@
          <div class="container">
             <h1 class="choose_taital">Why Choose Us</h1>
             <p class="choose_text">We are especially proud of our selection of tours around Bangladesh because it has no analogues in the market.We are glad to offer our clients the best rates on our tours, transfers and other services. Due to direct contracts with all our suppliers, our prices are always relevant and affordable.</p>
-            <div class="read_bt_1"><a href="#">Read More</a></div>
-            <div class="newsletter_box">
-               <h1 class="let_text">Let Start Talk with Us</h1>
-               <div class="getquote_bt"><a href="#">Questionnaire</a></div>
+            
             </div>
          </div>
       </div>
